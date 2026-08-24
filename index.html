@@ -1,0 +1,3230 @@
+<!doctype html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expansión y Bienestar · Terapias para sanar, transformar y florecer</title>
+    <meta name="description"
+        content="Acompañamiento terapéutico en Tanatología, Constelaciones Familiares, Mindfulness, Danzaterapia, Risoterapia y Bioactivación Kundalini. Talleres de bienestar para empresas en Calzada de los Jinetes 4, Valle Dorado, Tlalnepantla de Baz, Edomex y en línea.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        /* ============ TOKENS ============ */
+        :root {
+            --ink: #1B3A3D;
+            --ink-soft: #456163;
+            --paper: #F7F5EF;
+            --paper-alt: #EEEBE0;
+            --card: #FFFFFF;
+            --teal: #1D5C63;
+            --teal-deep: #123033;
+            --teal-tint: #DCEAE8;
+            --sage: #7FA894;
+            --gold: #E1974A;
+            --gold-deep: #C97A2E;
+            --coral: #E2604A;
+            --lavender: #8C7BA8;
+            --sky: #5C87A8;
+            --line: rgba(27, 58, 61, .12);
+            --shadow: 0 20px 50px -20px rgba(18, 48, 52, .35);
+            --shadow-sm: 0 10px 30px -14px rgba(18, 48, 52, .25);
+            --radius-lg: 32px;
+            --radius-md: 22px;
+            --radius-sm: 14px;
+            --ease: cubic-bezier(.22, .85, .32, 1);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: .001ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .001ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+            color: var(--ink);
+            background: var(--paper);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .display {
+            font-family: 'Fraunces', serif;
+            font-weight: 500;
+            line-height: 1.08;
+            letter-spacing: -.01em;
+            margin: 0;
+            color: var(--teal-deep);
+        }
+
+        p {
+            margin: 0;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        button {
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+        :focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 3px;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin-inline: auto;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: .55em;
+            font-size: .78rem;
+            font-weight: 700;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--teal);
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 22px;
+            height: 2px;
+            background: var(--gold);
+            border-radius: 2px;
+        }
+
+        .section {
+            position: relative;
+            padding: clamp(4rem, 8vw, 7.5rem) 0;
+        }
+
+        .section-alt {
+            background: var(--paper-alt);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity .8s var(--ease), transform .8s var(--ease);
+        }
+
+        .reveal.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-stagger.in-view>* {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-stagger>* {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity .7s var(--ease), transform .7s var(--ease);
+        }
+
+        .reveal-stagger.in-view>*:nth-child(1) {
+            transition-delay: .03s
+        }
+
+        .reveal-stagger.in-view>*:nth-child(2) {
+            transition-delay: .11s
+        }
+
+        .reveal-stagger.in-view>*:nth-child(3) {
+            transition-delay: .19s
+        }
+
+        .reveal-stagger.in-view>*:nth-child(4) {
+            transition-delay: .27s
+        }
+
+        .reveal-stagger.in-view>*:nth-child(5) {
+            transition-delay: .35s
+        }
+
+        .reveal-stagger.in-view>*:nth-child(6) {
+            transition-delay: .43s
+        }
+
+        .reveal-stagger.in-view>*:nth-child(7) {
+            transition-delay: .51s
+        }
+
+        .reveal-stagger.in-view>*:nth-child(8) {
+            transition-delay: .59s
+        }
+
+        /* Divider wave */
+        .wave {
+            display: block;
+            width: 100%;
+            line-height: 0;
+        }
+
+        .wave svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: .6em;
+            padding: .95em 1.7em;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: .95rem;
+            border: 1px solid transparent;
+            transition: transform .35s var(--ease), box-shadow .35s var(--ease), background .3s ease;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--teal-deep);
+            box-shadow: 0 14px 30px -12px rgba(225, 151, 74, .55);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 36px -12px rgba(225, 151, 74, .7);
+        }
+
+        .btn-outline {
+            border-color: rgba(255, 255, 255, .55);
+            color: #fff;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, .12);
+            transform: translateY(-3px);
+        }
+
+        .btn-ghost {
+            border-color: var(--line);
+            color: var(--teal-deep);
+            background: #fff;
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--teal);
+            transform: translateY(-3px);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: #08331d;
+            box-shadow: 0 14px 30px -14px rgba(37, 211, 102, .6);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+        }
+
+        /* ============ HEADER ============ */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(247, 245, 239, .82);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: .7rem 0;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: .7rem;
+        }
+
+        .brand img {
+            height: 44px;
+            width: auto;
+            border-radius: 12px;
+        }
+
+        .brand-name {
+            font-family: 'Fraunces', serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--teal-deep);
+            line-height: 1.1;
+        }
+
+        .brand-name span {
+            display: block;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: .62rem;
+            letter-spacing: .18em;
+            font-weight: 700;
+            color: var(--sage);
+            text-transform: uppercase;
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .main-nav a {
+            font-size: .92rem;
+            font-weight: 600;
+            color: var(--ink-soft);
+            position: relative;
+            padding: .3rem 0;
+        }
+
+        .main-nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width .3s var(--ease);
+        }
+
+        .main-nav a:hover::after {
+            width: 100%;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: 0;
+            padding: .4rem;
+        }
+
+        .nav-toggle span,
+        .nav-toggle span::before,
+        .nav-toggle span::after {
+            content: "";
+            display: block;
+            width: 26px;
+            height: 2px;
+            background: var(--teal-deep);
+            border-radius: 2px;
+            position: relative;
+            transition: all .3s ease;
+        }
+
+        .nav-toggle span::before {
+            position: absolute;
+            top: -8px;
+        }
+
+        .nav-toggle span::after {
+            position: absolute;
+            top: 8px;
+        }
+
+        /* ============ HERO ============ */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(180deg, #F9F7F1 0%, var(--paper) 60%, var(--paper) 100%);
+            padding-top: clamp(3.5rem, 8vw, 6rem);
+            padding-bottom: clamp(3rem, 6vw, 5rem);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-copy .eyebrow {
+            margin-bottom: 1.3rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.4rem, 5vw, 4rem);
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--gold-deep);
+        }
+
+        .hero-sub {
+            margin-top: 1.4rem;
+            font-size: 1.15rem;
+            color: var(--ink-soft);
+            max-width: 46ch;
+        }
+
+        .hero-ctas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2.2rem;
+        }
+
+        .hero-trust {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2.8rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-trust div {
+            font-size: .85rem;
+            color: var(--ink-soft);
+        }
+
+        .hero-trust strong {
+            display: block;
+            font-family: 'Fraunces', serif;
+            font-size: 1.6rem;
+            color: var(--teal-deep);
+            font-weight: 500;
+        }
+
+        .hero-art {
+            position: relative;
+            height: clamp(320px, 42vw, 520px);
+        }
+
+        .ribbon-svg {
+            position: absolute;
+            inset: -8% -20% -8% -8%;
+            width: 130%;
+            height: 116%;
+        }
+
+        .ribbon-path {
+            fill: none;
+            stroke-width: 5;
+            stroke-linecap: round;
+            stroke-dasharray: 14 14;
+            animation: flow 26s linear infinite;
+        }
+
+        @keyframes flow {
+            to {
+                stroke-dashoffset: -1400;
+            }
+        }
+
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(2px);
+            opacity: .55;
+        }
+
+        .hero-orb {
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            width: min(78%, 340px);
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 6px solid #fff;
+        }
+
+        .hero-orb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-tag {
+            position: absolute;
+            background: #fff;
+            border-radius: 999px;
+            padding: .7em 1.2em;
+            box-shadow: var(--shadow-sm);
+            font-size: .82rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: .5em;
+            animation: float 7s ease-in-out infinite;
+        }
+
+        .hero-tag i {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--sage);
+            display: block;
+            flex: none;
+        }
+
+        .tag-1 {
+            top: 6%;
+            left: -2%;
+        }
+
+        .tag-2 {
+            bottom: 10%;
+            right: -4%;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-12px)
+            }
+        }
+
+        /* ============ SOBRE MI ============ */
+        .about-section {
+            position: relative;
+            background:
+                radial-gradient(circle at 90% 15%, rgba(225, 151, 74, .08) 0%, transparent 45%),
+                radial-gradient(circle at 10% 85%, rgba(29, 92, 99, .06) 0%, transparent 50%),
+                var(--paper-alt);
+            padding: clamp(4.5rem, 8vw, 7rem) 0;
+            color: var(--ink);
+            text-align: left;
+            overflow: hidden;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: minmax(320px, 430px) 1fr;
+            gap: clamp(2.5rem, 5vw, 4.5rem);
+            align-items: center;
+            text-align: left;
+        }
+
+        .about-photo-col {
+            position: relative;
+            text-align: left;
+        }
+
+        .about-photo-frame {
+            position: relative;
+            width: 100%;
+            max-width: 430px;
+            aspect-ratio: 4/5;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            background: #fff;
+            border: 6px solid #fff;
+            box-shadow: 0 24px 50px -16px rgba(18, 48, 52, .22), 0 0 0 1px rgba(27, 58, 61, .08);
+        }
+
+        .about-photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 18%;
+            display: block;
+            transition: transform .7s var(--ease);
+        }
+
+        .about-photo-frame:hover img {
+            transform: scale(1.03);
+        }
+
+        .about-photo-badge {
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            right: 16px;
+            background: rgba(18, 48, 52, .88);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, .2);
+            border-radius: var(--radius-sm);
+            padding: .8rem 1.1rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+            box-shadow: var(--shadow-sm);
+            text-align: left;
+        }
+
+        .about-badge-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: rgba(225, 151, 74, .22);
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: none;
+        }
+
+        .about-badge-icon svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .about-photo-badge strong {
+            display: block;
+            font-size: .92rem;
+            font-family: 'Fraunces', serif;
+            color: #fff;
+            font-weight: 500;
+            line-height: 1.2;
+            text-align: left;
+        }
+
+        .about-photo-badge span {
+            display: block;
+            font-size: .74rem;
+            color: var(--sage);
+            letter-spacing: .03em;
+            margin-top: .15rem;
+            text-align: left;
+        }
+
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+            text-align: left;
+        }
+
+        .about-intro {
+            text-align: left;
+        }
+
+        .about-intro .eyebrow {
+            color: var(--teal);
+            margin-bottom: .85rem;
+            text-align: left;
+        }
+
+        .about-intro .eyebrow::before {
+            background: var(--gold);
+        }
+
+        .about-intro h2 {
+            color: var(--teal-deep);
+            font-size: clamp(2rem, 3.4vw, 2.85rem);
+            line-height: 1.12;
+            margin: 0 0 1rem;
+            text-align: left;
+        }
+
+        .about-desc {
+            color: var(--ink-soft);
+            font-size: 1.05rem;
+            line-height: 1.68;
+            max-width: 54ch;
+            text-align: left;
+            margin: 0;
+        }
+
+        .credential-card {
+            background: #FFFFFF;
+            border: 1px solid var(--line);
+            border-radius: var(--radius-md);
+            padding: clamp(1.6rem, 3vw, 2.2rem);
+            box-shadow: var(--shadow-sm);
+            text-align: left;
+            color: var(--ink);
+        }
+
+        .cred-heading {
+            display: flex;
+            align-items: center;
+            gap: .65rem;
+            margin-bottom: 1.2rem;
+            text-align: left;
+        }
+
+        .cred-heading-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 10px;
+            background: var(--teal-tint);
+            color: var(--teal);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: none;
+        }
+
+        .cred-heading-icon svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .credential-card h3 {
+            color: var(--teal-deep);
+            font-size: 1.18rem;
+            font-weight: 600;
+            margin: 0;
+            text-align: left;
+        }
+
+        .cred-list {
+            list-style: none;
+            margin: 0 0 1.5rem;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            text-align: left;
+        }
+
+        .cred-list li {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: .85rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--line);
+            font-size: .92rem;
+            text-align: left;
+            align-items: flex-start;
+        }
+
+        .cred-list li:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .cred-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--gold);
+            margin-top: .45rem;
+            flex: none;
+        }
+
+        .cred-info {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: .2rem;
+        }
+
+        .cred-info b {
+            display: block;
+            color: var(--teal-deep);
+            font-weight: 700;
+            font-size: .96rem;
+            text-align: left;
+        }
+
+        .cred-info .inst {
+            display: block;
+            color: var(--ink-soft);
+            font-size: .88rem;
+            text-align: left;
+        }
+
+        .cred-info .ced {
+            display: inline-flex;
+            align-items: center;
+            gap: .35rem;
+            align-self: flex-start;
+            margin-top: .25rem;
+            padding: .22em .65em;
+            background: var(--teal-tint);
+            color: var(--teal-deep);
+            border-radius: 6px;
+            font-size: .76rem;
+            font-weight: 700;
+            letter-spacing: .02em;
+            text-align: left;
+        }
+
+        .specialty-section {
+            margin-top: 1.4rem;
+            padding-top: 1.4rem;
+            border-top: 1px solid var(--line);
+            text-align: left;
+        }
+
+        .specialty-title {
+            color: var(--teal-deep);
+            font-size: .92rem;
+            font-weight: 700;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+            margin: 0 0 .85rem;
+            text-align: left;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .specialty-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .55rem;
+            text-align: left;
+            justify-content: flex-start;
+        }
+
+        .chip {
+            font-size: .8rem;
+            font-weight: 600;
+            padding: .48em .95em;
+            border-radius: 999px;
+            background: rgba(29, 92, 99, .06);
+            border: 1px solid rgba(29, 92, 99, .14);
+            color: var(--teal-deep);
+            display: inline-flex;
+            align-items: center;
+            gap: .45em;
+            transition: background .25s, border-color .25s, transform .25s;
+            text-align: left;
+        }
+
+        .chip:hover {
+            background: rgba(29, 92, 99, .12);
+            border-color: var(--teal);
+            transform: translateY(-2px);
+        }
+
+        .chip-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--gold);
+            flex: none;
+            display: block;
+        }        /* ============ SERVICIOS ============ */
+        .section-head {
+            max-width: 58ch;
+            margin-bottom: clamp(2.4rem, 5vw, 3.6rem);
+            text-align: left;
+        }
+
+        .section-head h2 {
+            font-size: clamp(2rem, 4vw, 2.9rem);
+            margin-top: .9rem;
+            text-align: left;
+        }
+
+        .section-head p {
+            margin-top: 1.1rem;
+            color: var(--ink-soft);
+            font-size: 1.08rem;
+            text-align: left;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.6rem;
+            text-align: left;
+        }
+
+        .service-card {
+            background: var(--card);
+            border-radius: var(--radius-md);
+            padding: 2.2rem 1.8rem;
+            border: 1px solid var(--line);
+            transition: transform .4s var(--ease), box-shadow .4s var(--ease), border-color .4s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: left;
+        }
+
+        .service-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--accent, var(--teal));
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow);
+            border-color: transparent;
+        }
+
+        .service-card-top {
+            text-align: left;
+        }
+
+        .service-badge-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.2rem;
+            gap: .5rem;
+        }
+
+        .service-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: color-mix(in srgb, var(--accent, var(--teal)) 14%, white);
+            color: var(--accent, var(--teal));
+            flex: none;
+        }
+
+        .service-icon svg {
+            width: 26px;
+            height: 26px;
+        }
+
+        .service-price-pill {
+            background: var(--gold);
+            color: var(--teal-deep);
+            font-weight: 800;
+            font-size: .8rem;
+            padding: .35em .8em;
+            border-radius: 999px;
+            box-shadow: 0 4px 12px -4px rgba(225, 151, 74, .6);
+            white-space: nowrap;
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--teal-deep);
+            line-height: 1.25;
+            margin-bottom: .4rem;
+            text-align: left;
+        }
+
+        .service-motto {
+            font-size: .82rem;
+            font-weight: 700;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+            color: var(--accent, var(--teal));
+            margin-bottom: .8rem;
+            display: block;
+            text-align: left;
+        }
+
+        .service-card p {
+            font-size: .92rem;
+            color: var(--ink-soft);
+            line-height: 1.55;
+            text-align: left;
+            margin-bottom: 1.2rem;
+        }
+
+        .service-bullets {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: .55rem;
+            text-align: left;
+        }
+
+        .service-bullets li {
+            font-size: .84rem;
+            color: var(--ink-soft);
+            display: flex;
+            align-items: flex-start;
+            gap: .55rem;
+            text-align: left;
+        }
+
+        .service-bullets li svg {
+            width: 16px;
+            height: 16px;
+            color: var(--accent, var(--teal));
+            flex: none;
+            margin-top: .2rem;
+        }
+
+        .service-card-actions {
+            display: flex;
+            flex-direction: column;
+            gap: .6rem;
+            margin-top: auto;
+            text-align: left;
+        }
+
+        .btn-service-detail {
+            width: 100%;
+            padding: .7em 1.2em;
+            border-radius: 999px;
+            font-size: .85rem;
+            font-weight: 700;
+            background: rgba(29, 92, 99, .07);
+            color: var(--teal-deep);
+            border: 1px solid rgba(29, 92, 99, .18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5em;
+            transition: all .25s ease;
+            cursor: pointer;
+        }
+
+        .btn-service-detail:hover {
+            background: var(--teal-deep);
+            color: #fff;
+            border-color: var(--teal-deep);
+        }
+
+        .btn-service-wa {
+            width: 100%;
+            padding: .7em 1.2em;
+            border-radius: 999px;
+            font-size: .85rem;
+            font-weight: 700;
+            background: #25D366;
+            color: #08331d;
+            border: 1px solid transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5em;
+            transition: all .25s ease;
+            text-decoration: none;
+        }
+
+        .btn-service-wa:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px -6px rgba(37, 211, 102, .6);
+        }
+
+        /* Modal for service details */
+        .service-modal-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 999;
+            background: rgba(18, 48, 52, .75);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .3s ease, visibility .3s ease;
+        }
+
+        .service-modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .service-modal-box {
+            background: #ffffff;
+            border-radius: var(--radius-lg);
+            width: min(760px, 95vw);
+            max-height: 88vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--line);
+            position: relative;
+            padding: clamp(1.8rem, 4vw, 2.8rem);
+            text-align: left;
+            transform: translateY(20px) scale(.98);
+            transition: transform .3s var(--ease);
+        }
+
+        .service-modal-overlay.active .service-modal-box {
+            transform: translateY(0) scale(1);
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 1.2rem;
+            right: 1.2rem;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--paper-alt);
+            border: 1px solid var(--line);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--teal-deep);
+            transition: all .25s;
+            cursor: pointer;
+        }
+
+        .modal-close-btn:hover {
+            background: var(--teal-deep);
+            color: #fff;
+        }
+
+        .modal-badge-tag {
+            display: inline-block;
+            padding: .3em .85em;
+            background: var(--teal-tint);
+            color: var(--teal-deep);
+            font-size: .76rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            border-radius: 999px;
+            margin-bottom: .8rem;
+        }
+
+        .modal-title {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            color: var(--teal-deep);
+            margin-bottom: .4rem;
+            line-height: 1.18;
+            font-family: 'Fraunces', serif;
+        }
+
+        .modal-motto {
+            color: var(--gold-deep);
+            font-weight: 700;
+            font-size: .95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-content-body {
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
+            color: var(--ink);
+            font-size: .95rem;
+            line-height: 1.65;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .modal-section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.18rem;
+            color: var(--teal-deep);
+            margin: 0 0 .5rem;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+
+        .modal-section-title::before {
+            content: "";
+            width: 14px;
+            height: 3px;
+            background: var(--gold);
+            border-radius: 2px;
+        }
+
+        .modal-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            text-align: left;
+        }
+
+        .modal-list li {
+            position: relative;
+            padding-left: 1.4rem;
+            color: var(--ink-soft);
+            text-align: left;
+        }
+
+        .modal-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--teal);
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        .modal-step-box {
+            display: flex;
+            flex-direction: column;
+            gap: .6rem;
+            background: var(--paper-alt);
+            padding: 1.2rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--line);
+            text-align: left;
+        }
+
+        .modal-step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: .75rem;
+            text-align: left;
+        }
+
+        .modal-step-num {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--teal);
+            color: #fff;
+            font-size: .75rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: none;
+            margin-top: .15rem;
+        }
+
+        .modal-footer-cta {
+            padding-top: 1.4rem;
+            border-top: 1px solid var(--line);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* ============ TALLERES DE BIENESTAR / CAROUSEL ============ */
+        .workshop-wrap {
+            position: relative;
+            max-width: 100%;
+        }
+
+        .workshop-track {
+            display: flex;
+            gap: 1.6rem;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            padding: .8rem .4rem 2rem;
+            margin: 0 -.4rem;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .workshop-track::-webkit-scrollbar {
+            display: none;
+        }
+
+        .workshop-slide {
+            scroll-snap-align: start;
+            flex: 0 0 auto;
+            width: min(80%, 420px);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 16px 36px -12px rgba(18, 48, 52, .18), 0 0 0 1px rgba(27, 58, 61, .08);
+            aspect-ratio: 4/5;
+            background: #0f272a;
+            transition: transform .6s cubic-bezier(.22, .85, .32, 1), box-shadow .6s cubic-bezier(.22, .85, .32, 1), opacity .5s ease;
+            opacity: .88;
+            user-select: none;
+        }
+
+        .workshop-slide.is-active {
+            opacity: 1;
+            transform: scale(1.02);
+            box-shadow: 0 24px 50px -14px rgba(18, 48, 52, .32), 0 0 0 1.5px rgba(225, 151, 74, .35);
+        }
+
+        .workshop-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .8s cubic-bezier(.22, .85, .32, 1);
+            display: block;
+        }
+
+        .workshop-slide:hover img {
+            transform: scale(1.06);
+        }
+
+        .workshop-caption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 2rem 1.6rem 1.4rem;
+            background: linear-gradient(0deg, rgba(14, 39, 43, .95) 0%, rgba(14, 39, 43, .65) 55%, rgba(14, 39, 43, 0) 100%);
+            color: #fff;
+            text-align: left;
+            transition: transform .5s var(--ease);
+        }
+
+        .workshop-caption span {
+            font-size: .72rem;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: .25rem;
+        }
+
+        .workshop-caption h4 {
+            color: #fff;
+            font-size: 1.22rem;
+            margin: 0;
+            font-weight: 600;
+            line-height: 1.25;
+            font-family: 'Fraunces', serif;
+        }
+
+        .workshop-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .workshop-dots {
+            display: flex;
+            gap: .5rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .workshop-dots button {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            border: 0;
+            background: var(--line);
+            padding: 0;
+            cursor: pointer;
+            transition: background .35s var(--ease), width .35s var(--ease), border-radius .35s var(--ease);
+        }
+
+        .workshop-dots button.active {
+            background: var(--gold);
+            width: 28px;
+            border-radius: 6px;
+        }
+
+        .arrow-group {
+            display: flex;
+            gap: .6rem;
+        }
+
+        .arrow-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1px solid var(--line);
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all .3s var(--ease);
+            color: var(--ink);
+        }
+
+        .arrow-btn:hover {
+            background: var(--teal-deep);
+            border-color: var(--teal-deep);
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .arrow-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* ============ RECONOCIMIENTOS ============ */
+        .cred-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.4rem;
+            margin-bottom: 3rem;
+        }
+
+        .cred-tile {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-md);
+            padding: 1.8rem;
+            display: flex;
+            gap: 1.1rem;
+            align-items: flex-start;
+        }
+
+        .cred-tile .cred-mark {
+            flex: none;
+            width: 46px;
+            height: 46px;
+            border-radius: 14px;
+            background: var(--teal-tint);
+            color: var(--teal);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cred-tile h4 {
+            font-size: 1.02rem;
+            font-weight: 700;
+            color: var(--teal-deep);
+        }
+
+        .cred-tile p {
+            margin-top: .3rem;
+            font-size: .85rem;
+            color: var(--ink-soft);
+        }
+
+        .marquee-label {
+            text-align: center;
+            font-size: .78rem;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--sage);
+            margin-bottom: 1.4rem;
+        }
+
+        .marquee {
+            overflow: hidden;
+            position: relative;
+            -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+            mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+        }
+
+        .marquee-track {
+            display: flex;
+            gap: 2.8rem;
+            width: max-content;
+            animation: scroll-x 28s linear infinite;
+        }
+
+        @keyframes scroll-x {
+            from {
+                transform: translateX(0)
+            }
+
+            to {
+                transform: translateX(-50%)
+            }
+        }
+
+        .marquee-item {
+            display: flex;
+            align-items: center;
+            gap: .7rem;
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            color: var(--ink-soft);
+            opacity: .7;
+            white-space: nowrap;
+        }
+
+        .marquee-item i {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--gold);
+        }
+
+        /* ============ PAGO ============ */
+        .pay-panel {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            background: var(--teal-deep);
+            color: #fff;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .pay-info {
+            padding: clamp(2.2rem, 4vw, 3.4rem);
+        }
+
+        .pay-info .eyebrow {
+            color: var(--sage);
+        }
+
+        .pay-info .eyebrow::before {
+            background: var(--gold);
+        }
+
+        .pay-info h2 {
+            color: #fff;
+            margin-top: 1rem;
+            font-size: clamp(1.7rem, 3vw, 2.3rem);
+        }
+
+        .pay-steps {
+            list-style: none;
+            margin: 1.6rem 0 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+        }
+
+        .pay-steps li {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            font-size: .95rem;
+            color: rgba(255, 255, 255, .85);
+        }
+
+        .step-num {
+            flex: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .14);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: .85rem;
+            color: var(--gold);
+        }
+
+        .pay-card {
+            background: rgba(255, 255, 255, .06);
+            padding: clamp(2.2rem, 4vw, 3.4rem);
+            border-left: 1px solid rgba(255, 255, 255, .12);
+        }
+
+        .bank-card {
+            background: linear-gradient(135deg, #254E52, #1A3F42);
+            border: 1px solid rgba(255, 255, 255, .18);
+            border-radius: var(--radius-md);
+            padding: 1.8rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bank-card::after {
+            content: "";
+            position: absolute;
+            right: -30px;
+            top: -30px;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(225, 151, 74, .3), transparent 70%);
+        }
+
+        .bank-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: .75rem 0;
+            border-bottom: 1px dashed rgba(255, 255, 255, .18);
+        }
+
+        .bank-row:last-of-type {
+            border-bottom: 0;
+        }
+
+        .bank-row span {
+            font-size: .72rem;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .55);
+            display: block;
+        }
+
+        .bank-row strong {
+            font-size: 1rem;
+            letter-spacing: .03em;
+            font-weight: 700;
+        }
+
+        .copy-btn {
+            background: rgba(255, 255, 255, .12);
+            border: 1px solid rgba(255, 255, 255, .3);
+            color: #fff;
+            border-radius: 8px;
+            padding: .4em .8em;
+            font-size: .72rem;
+            font-weight: 700;
+            flex: none;
+            display: inline-flex;
+            align-items: center;
+            gap: .4em;
+            transition: background .25s;
+        }
+
+        .copy-btn:hover {
+            background: rgba(255, 255, 255, .24);
+        }
+
+        .pay-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .9rem;
+            margin-top: 1.8rem;
+        }
+
+        /* ============ UBICACION ============ */
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.4rem;
+            align-items: stretch;
+        }
+
+        .location-card {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-md);
+            padding: 2.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
+        }
+
+        .location-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .location-item .mark {
+            flex: none;
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: var(--teal-tint);
+            color: var(--teal);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .location-item h4 {
+            font-size: .95rem;
+            font-weight: 700;
+            color: var(--teal-deep);
+        }
+
+        .location-item p {
+            font-size: .88rem;
+            color: var(--ink-soft);
+            margin-top: .2rem;
+        }
+
+        .map-frame {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--line);
+            min-height: 340px;
+            box-shadow: var(--shadow-sm);
+            filter: saturate(.85) contrast(1.02);
+        }
+
+        .map-frame iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 340px;
+            border: 0;
+            display: block;
+        }
+
+        /* ============ FOOTER ============ */
+        .site-footer {
+            background: var(--teal-deep);
+            color: rgba(255, 255, 255, .85);
+            padding-top: 4.5rem;
+        }
+
+        .footer-cta {
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto 3.5rem;
+        }
+
+        .footer-cta h2 {
+            color: #fff;
+            font-size: clamp(1.9rem, 4vw, 2.6rem);
+        }
+
+        .footer-cta p {
+            margin-top: 1rem;
+            color: rgba(255, 255, 255, .7);
+        }
+
+        .footer-cta .hero-ctas {
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 2.5rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid rgba(255, 255, 255, .12);
+        }
+
+        .footer-brand .brand-name,
+        .footer-brand .brand-name span {
+            color: #fff;
+        }
+
+        .footer-brand p {
+            margin-top: 1rem;
+            font-size: .88rem;
+            color: rgba(255, 255, 255, .6);
+            max-width: 34ch;
+        }
+
+        .footer-col h5 {
+            font-size: .78rem;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: .7rem;
+        }
+
+        .footer-col a {
+            font-size: .9rem;
+            color: rgba(255, 255, 255, .78);
+            transition: color .25s;
+        }
+
+        .footer-col a:hover {
+            color: var(--gold);
+        }
+
+        .social-row {
+            display: flex;
+            gap: .7rem;
+            margin-top: .4rem;
+        }
+
+        .social-row a {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background .25s, transform .3s;
+        }
+
+        .social-row a:hover {
+            background: var(--gold);
+            color: var(--teal-deep);
+            transform: translateY(-3px);
+        }
+
+        .social-row svg {
+            width: 17px;
+            height: 17px;
+        }
+
+        .footer-bottom {
+            padding: 1.6rem 0 2.2rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: .8rem;
+            font-size: .78rem;
+            color: rgba(255, 255, 255, .45);
+        }
+
+        /* WhatsApp floating button */
+        .float-wa {
+            position: fixed;
+            bottom: 22px;
+            right: 22px;
+            z-index: 200;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #25D366;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 14px 30px -8px rgba(37, 211, 102, .6);
+            animation: pulse-wa 2.6s ease-in-out infinite;
+        }
+
+        .float-wa svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        @keyframes pulse-wa {
+
+            0%,
+            100% {
+                transform: scale(1)
+            }
+
+            50% {
+                transform: scale(1.08)
+            }
+        }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width:980px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cred-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pay-panel {
+                grid-template-columns: 1fr;
+            }
+
+            .pay-card {
+                border-left: 0;
+                border-top: 1px solid rgba(255, 255, 255, .12);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .about-photo-col {
+                display: flex;
+                justify-content: flex-start;
+            }
+
+            .about-photo-frame {
+                max-width: 380px;
+            }
+        }
+
+        @media (max-width:860px) {
+            .main-nav {
+                position: fixed;
+                inset: 64px 0 0 0;
+                background: var(--paper);
+                flex-direction: column;
+                padding: 2.4rem;
+                gap: 1.6rem;
+                transform: translateX(100%);
+                transition: transform .4s var(--ease);
+                align-items: flex-start;
+            }
+
+            .main-nav.open {
+                transform: translateX(0);
+            }
+
+            .main-nav a {
+                font-size: 1.15rem;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-art {
+                order: -1;
+                height: 340px;
+            }
+        }
+
+        @media (max-width:640px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-trust {
+                gap: 1.4rem;
+            }
+
+            .workshop-slide {
+                width: 88%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============ HEADER ============ -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#inicio" class="brand">
+                <img src="assets/logo.jpg" alt="Logotipo Expansión y Bienestar">
+                <span class="brand-name">Expansión<span>y Bienestar</span></span>
+            </a>
+            <nav class="main-nav" id="mainNav">
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#talleres">Talleres</a>
+                <a href="#reconocimientos">Respaldo</a>
+                <a href="#pago">Reservaciones</a>
+                <a href="#ubicacion">Ubicación</a>
+                <a class="btn btn-ghost" href="#pago">Agenda tu sesión</a>
+            </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú"
+                aria-expanded="false"><span></span></button>
+        </div>
+    </header>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio">
+        <div class="container hero-grid">
+            <div class="hero-copy reveal">
+                <span class="eyebrow">Terapia integral · Valle Dorado, Edomex</span>
+                <h1>Sana tu historia,<br>reconecta con tu <em>calma</em><br>y florece de nuevo.</h1>
+                <p class="hero-sub">Acompañamiento profesional en salud emocional y mental a través de tanatología,
+                    constelaciones familiares, mindfulness y terapias de movimiento. Un espacio seguro para transformar
+                    el dolor en bienestar.</p>
+                <div class="hero-ctas">
+                    <a href="#pago" class="btn btn-primary">Agenda tu sesión</a>
+                    <a href="https://wa.me/525534334147?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20sesi%C3%B3n"
+                        target="_blank" rel="noopener" class="btn btn-ghost">Escribir por WhatsApp</a>
+                </div>
+                <div class="hero-trust">
+                    <div><strong>7</strong>servicios terapéuticos</div>
+                    <div><strong>24/7</strong>línea de atención</div>
+                    <div><strong>Cédula</strong>profesional certificada</div>
+                </div>
+            </div>
+            <div class="hero-art">
+                <svg class="ribbon-svg" viewBox="0 0 600 500" preserveAspectRatio="none" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="ribbonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#1D5C63" />
+                            <stop offset="35%" stop-color="#7FA894" />
+                            <stop offset="65%" stop-color="#E1974A" />
+                            <stop offset="100%" stop-color="#8C7BA8" />
+                        </linearGradient>
+                    </defs>
+                    <path class="ribbon-path" stroke="url(#ribbonGrad)"
+                        d="M-20,260 C110,120 190,400 300,260 C410,120 490,400 620,240" />
+                    <path class="ribbon-path" style="animation-delay:-8s;opacity:.5" stroke="url(#ribbonGrad)"
+                        d="M-20,320 C110,180 190,460 300,320 C410,180 490,460 620,300" />
+                </svg>
+                <div class="blob" style="width:180px;height:180px;background:var(--sage);top:6%;right:8%;opacity:.28;">
+                </div>
+                <div class="blob"
+                    style="width:140px;height:140px;background:var(--gold);bottom:4%;left:2%;opacity:.25;"></div>
+                <div class="hero-orb"><img src="assets/mindfulness_photo.jpg"
+                        alt="Sesión de mindfulness, mujer meditando en calma"></div>
+                <span class="hero-tag tag-1"><i></i>Reír es sanar</span>
+                <span class="hero-tag tag-2"><i></i>Presencia plena</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="wave" style="color:var(--paper-alt)">
+        <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+            <path fill="currentColor" d="M0,40 C200,90 400,0 600,30 C800,60 1000,10 1200,40 L1200,80 L0,80 Z" />
+        </svg>
+    </div>
+
+    <!-- ============ SOBRE MÍ ============ -->
+    <section class="about-section" id="sobre-mi">
+        <div class="container about-grid">
+            <div class="about-photo-col reveal">
+                <div class="about-photo-frame">
+                    <img src="assets/profile_photo.jpg" alt="Nancy García Loyo · Psicoterapeuta y Tanatóloga">
+                    <div class="about-photo-badge">
+                        <div class="about-badge-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <strong> Mtra. Nancy García Loyo</strong>
+                            <span>Acompañamiento profesional</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-content">
+                <div class="about-intro reveal">
+                    <span class="eyebrow">Sobre mí</span>
+                    <h2>Un acompañamiento<br>humano, cálido y<br>profesional.</h2>
+                    <p class="about-desc">Creo en la terapia como un puente entre el dolor y el propósito. Cada sesión
+                        está diseñada para que encuentres claridad, herramientas y un espacio seguro donde reconstruir
+                        tu bienestar desde el amor propio.</p>
+                </div>
+                <div class="credential-card reveal">
+                    <div class="cred-heading">
+                        <div class="cred-heading-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                            </svg>
+                        </div>
+                        <h3>Formación académica</h3>
+                    </div>
+                    <ul class="cred-list">
+                        <li>
+                            <span class="cred-dot"></span>
+                            <div class="cred-info">
+                                <b>Maestría en Tanatología</b>
+                                <span class="inst">Instituto Mexicano de Psicooncología</span>
+                                <span class="ced">Cédula Profesional: 15677547</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="cred-dot"></span>
+                            <div class="cred-info">
+                                <b>Licenciatura en Psicología Social</b>
+                                <span class="inst">Universidad Mexicana, Campus Izcalli</span>
+                                <span class="ced">Cédula Profesional: 6113080</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="specialty-section">
+                        <h4 class="specialty-title">Especialidades y enfoques</h4>
+                        <div class="specialty-chips">
+                            <span class="chip"><i class="chip-dot"></i>Constelaciones Familiares y en Ventas</span>
+                            <span class="chip"><i class="chip-dot"></i>Tanatología Sistémica</span>
+                            <span class="chip"><i class="chip-dot"></i>Bioactivación Energética Kundalini</span>
+                            <span class="chip"><i class="chip-dot"></i>Mindfulness</span>
+                            <span class="chip"><i class="chip-dot"></i>Danzaterapia</span>
+                            <span class="chip"><i class="chip-dot"></i>Risoterapia / Yoga de la Risa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SERVICIOS ============ -->
+    <section class="section" id="servicios">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Catálogo Oficial de Servicios</span>
+                <h2>Herramientas para sanar cuerpo, mente y espíritu</h2>
+                <p>Nuestros 7 servicios y enfoques terapéuticos especializados para acompañar tu proceso de bienestar, transformación y propósito.</p>
+            </div>
+            <div class="services-grid reveal-stagger">
+
+                <!-- SERVICIO 1 -->
+                <article class="service-card" style="--accent:var(--teal)">
+                    <div class="service-card-top">
+                        <div class="service-badge-row">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                                    <path d="M12 21s-7-4.5-9-9c-1.4-3 1-6 4-6 2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3 0 5.4 3 4 6-2 4.5-9 9-9 9Z" />
+                                </svg>
+                            </div>
+                            <span class="service-price-pill">Costo $700</span>
+                        </div>
+                        <h3>Constelaciones Familiares / Tanatología Sistémica</h3>
+                        <span class="service-motto">Ventas · Tanatología Sistémica · Paquetes</span>
+                        <p>Acompañamiento sistémico para sanar dinámicas familiares, superar bloqueos en tus ventas y dar sentido y cierre amoroso a tus procesos de pérdida.</p>
+                        <ul class="service-bullets">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Constelaciones Familiares y en Ventas</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Tanatología Sistémica integral</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>¡También contamos con paquetes!</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="service-card-actions">
+                        <button class="btn-service-detail" data-open-modal="1">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                            Ver información completa
+                        </button>
+                        <a href="https://wa.me/525534334147?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20Constelaciones%20Familiares%20%2F%20Tanatolog%C3%ADa%20Sist%C3%A9mica%20(Costo%20%24700)" target="_blank" rel="noopener" class="btn-service-wa">
+                            Agendar por WhatsApp
+                        </a>
+                    </div>
+                </article>
+
+                <!-- SERVICIO 2 -->
+                <article class="service-card" style="--accent:var(--coral)">
+                    <div class="service-card-top">
+                        <div class="service-badge-row">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                                    <path d="M12 21V3m0 0c-2 2-2 4 0 6m0-6c2 2 2 4 0 6m0 0c-2 2-2 4 0 6m0-6c2 2 2 4 0 6" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3>Bioactivación Energética Kundalini</h3>
+                        <span class="service-motto">Despierta tu energía, transforma tu vida</span>
+                        <p>Proceso de armonización y activación de tu energía vital que despierta tu conciencia, libera bloqueos y eleva tu vibración para conectar con tu esencia.</p>
+                        <ul class="service-bullets">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Armoniza chakras y campo energético</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Libera estrés, ansiedad y bloqueos</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Evaluación y alineación en 5 pasos</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="service-card-actions">
+                        <button class="btn-service-detail" data-open-modal="2">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                            Ver información completa
+                        </button>
+                        <a href="https://wa.me/525534334147?text=Hola%2C%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20de%20Bioactivaci%C3%B3n%20Energ%C3%A9tica%20Kundalini" target="_blank" rel="noopener" class="btn-service-wa">
+                            Agendar por WhatsApp
+                        </a>
+                    </div>
+                </article>
+
+                <!-- SERVICIO 3 -->
+                <article class="service-card" style="--accent:var(--gold)">
+                    <div class="service-card-top">
+                        <div class="service-badge-row">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                                    <path d="M12 3c3 2 3 6 0 9-3-3-3-7 0-9Z" />
+                                    <path d="M12 12v9" />
+                                    <path d="M7 21c1.5-2 3-2 5-2s3.5 0 5 2" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3>Constelaciones que Transforman tu Vida</h3>
+                        <span class="service-motto">Familiares y Ventas · Bert Hellinger</span>
+                        <p>Herramienta terapéutica para sanar heridas de origen, liberar lealtades invisibles y desbloquear el flujo del dinero, clientes y abundancia en tu negocio.</p>
+                        <ul class="service-bullets">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Sanación de vínculos y patrones repetitivos</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Constelaciones en Ventas y Prosperidad</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Para personas, emprendedores y equipos</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="service-card-actions">
+                        <button class="btn-service-detail" data-open-modal="3">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                            Ver información completa
+                        </button>
+                        <a href="https://wa.me/525534334147?text=Hola%2C%20me%20interesa%20agendar%20Constelaciones%20que%20Transforman%20tu%20Vida" target="_blank" rel="noopener" class="btn-service-wa">
+                            Agendar por WhatsApp
+                        </a>
+                    </div>
+                </article>
+
+                <!-- SERVICIO 4 -->
+                <article class="service-card" style="--accent:var(--gold-deep)">
+                    <div class="service-card-top">
+                        <div class="service-badge-row">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                                    <circle cx="12" cy="9" r="3" />
+                                    <path d="M8 21c0-3 1.8-5 4-5s4 2 4 5" />
+                                    <path d="M5 12c-1-1-1-3 0-4m14 4c1-1 1-3 0-4" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3>Risoterapia</h3>
+                        <span class="service-motto">La risa que transforma tu vida</span>
+                        <p>Método creado en 1995 por el Dr. Madan Kataria. Estimula la risa consciente mediante dinámicas lúdicas y respiración para reducir estrés y fortalecer tu salud.</p>
+                        <ul class="service-bullets">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Reduce estrés y fortalece inmunidad</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>No requieres humor, ¡solo ganas de vivirlo!</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Ideal individual y para integración de equipos</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="service-card-actions">
+                        <button class="btn-service-detail" data-open-modal="4">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                            Ver información completa
+                        </button>
+                        <a href="https://wa.me/525534334147?text=Hola%2C%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20de%20Risoterapia" target="_blank" rel="noopener" class="btn-service-wa">
+                            Agendar por WhatsApp
+                        </a>
+                    </div>
+                </article>
+
+                <!-- SERVICIO 5 -->
+                <article class="service-card" style="--accent:var(--sky)">
+                    <div class="service-card-top">
+                        <div class="service-badge-row">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                                    <circle cx="12" cy="8" r="3.2" />
+                                    <path d="M12 11.2V16m-4 5c.5-2.5 2-4 4-4s3.5 1.5 4 4" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3>Mindfulness</h3>
+                        <span class="service-motto">Atención plena para transformar tu vida</span>
+                        <p>Práctica de presencia consciente para habitar el momento presente con claridad, sanar patrones repetitivos, reducir la ansiedad y reconectar con la calma.</p>
+                        <ul class="service-bullets">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Disminuye la ansiedad y la preocupación</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Mejora concentración, memoria y enfoque</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Sana patrones negativos y agotamiento</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="service-card-actions">
+                        <button class="btn-service-detail" data-open-modal="5">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                            Ver información completa
+                        </button>
+                        <a href="https://wa.me/525534334147?text=Hola%2C%20me%20interesa%20agendar%20terapia%20de%20Mindfulness" target="_blank" rel="noopener" class="btn-service-wa">
+                            Agendar por WhatsApp
+                        </a>
+                    </div>
+                </article>
+
+                <!-- SERVICIO 6 -->
+                <article class="service-card" style="--accent:var(--sage)">
+                    <div class="service-card-top">
+                        <div class="service-badge-row">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                                    <path d="M12 3v6m0 0-4 4m4-4 4 4M6 21c2-4 4-6 6-8m6 8c-2-4-4-6-6-8" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3>Danzaterapia (Danzoterapia)</h3>
+                        <span class="service-motto">El movimiento que sana, transforma y libera</span>
+                        <p>El cuerpo recuerda y sana al moverse. A través de la música, respiración y movimiento consciente, liberamos traumas corporales y emociones reprimidas.</p>
+                        <ul class="service-bullets">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Expresa lo que las palabras no alcanzan</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Sana dolor y tensión somatizada</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Mayor flexibilidad, alegría y calidad de sueño</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="service-card-actions">
+                        <button class="btn-service-detail" data-open-modal="6">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                            Ver información completa
+                        </button>
+                        <a href="https://wa.me/525534334147?text=Hola%2C%20me%20interesa%20agendar%20Danzaterapia" target="_blank" rel="noopener" class="btn-service-wa">
+                            Agendar por WhatsApp
+                        </a>
+                    </div>
+                </article>
+
+                <!-- SERVICIO 7 -->
+                <article class="service-card" style="--accent:var(--lavender)">
+                    <div class="service-card-top">
+                        <div class="service-badge-row">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                                    <path d="M12 21s-7-4.5-9-9c-1.4-3 1-6 4-6 2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3 0 5.4 3 4 6-2 4.5-9 9-9 9Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3>Tanatología</h3>
+                        <span class="service-motto">Transforma tu dolor en bienestar y propósito</span>
+                        <p>Acompañamiento terapéutico ante pérdidas significativas, rupturas o duelos para comprender tus emociones, perdonar y reconstruir tu vida con nuevo significado.</p>
+                        <ul class="service-bullets">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>5 Puntos de Sanación: Aceptación a Propósito</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Gestión de tristeza, culpa y enojo</span>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Paz interior, fortaleza y gratitud</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="service-card-actions">
+                        <button class="btn-service-detail" data-open-modal="7">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                            Ver información completa
+                        </button>
+                        <a href="https://wa.me/525534334147?text=Hola%2C%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20de%20Tanatolog%C3%ADa" target="_blank" rel="noopener" class="btn-service-wa">
+                            Agendar por WhatsApp
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="wave" style="color:var(--paper-alt)">
+        <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+            <path fill="currentColor" d="M0,20 C300,80 500,0 700,30 C900,60 1050,20 1200,45 L1200,0 L0,0 Z" />
+        </svg>
+    </div>
+
+    <!-- ============ TALLERES DE BIENESTAR A LAS EMPRESAS ============ -->
+    <section class="section section-alt" id="talleres">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Bienestar Corporativo e Institucional</span>
+                <h2>Talleres de Bienestar a las Empresas</h2>
+                <p>Experiencias vivenciales y dinámicas grupales diseñadas para fortalecer el clima laboral, reducir el estrés, potenciar el trabajo en equipo y elevar la vitalidad de tus colaboradores.</p>
+            </div>
+
+            <div class="workshop-wrap reveal">
+                <div class="workshop-track" id="workshopTrack">
+                    <!-- Foto 1 -->
+                    <div class="workshop-slide">
+                        <img src="assets/carrusel_1.jpg" onerror="this.onerror=null;this.src='assets/risoterapia_photo.jpg';" alt="Taller de Bienestar Empresarial 1 - Integración y Clima Laboral">
+                        <div class="workshop-caption">
+                            <span>Taller 1</span>
+                            <h4>Integración y Clima Laboral</h4>
+                        </div>
+                    </div>
+                    <!-- Foto 2 -->
+                    <div class="workshop-slide">
+                        <img src="assets/carrusel_2.jpg" onerror="this.onerror=null;this.src='assets/mindfulness_photo.jpg';" alt="Taller de Bienestar Empresarial 2 - Mindfulness Corporativo">
+                        <div class="workshop-caption">
+                            <span>Taller 2</span>
+                            <h4>Mindfulness y Enfoque Bajo Presión</h4>
+                        </div>
+                    </div>
+                    <!-- Foto 3 -->
+                    <div class="workshop-slide">
+                        <img src="assets/carrusel_3.jpg" onerror="this.onerror=null;this.src='assets/danzoterapia_photo.jpg';" alt="Taller de Bienestar Empresarial 3 - Risoterapia y Manejo del Estrés">
+                        <div class="workshop-caption">
+                            <span>Taller 3</span>
+                            <h4>Risoterapia y Manejo del Estrés</h4>
+                        </div>
+                    </div>
+                    <!-- Foto 4 -->
+                    <div class="workshop-slide">
+                        <img src="assets/carrusel_4.jpg" onerror="this.onerror=null;this.src='assets/risoterapia_photo.jpg';" alt="Taller de Bienestar Empresarial 4 - Danzaterapia y Movimiento Consciente">
+                        <div class="workshop-caption">
+                            <span>Taller 4</span>
+                            <h4>Danzaterapia y Liberación Emocional</h4>
+                        </div>
+                    </div>
+                    <!-- Foto 5 -->
+                    <div class="workshop-slide">
+                        <img src="assets/carrusel_5.jpg" onerror="this.onerror=null;this.src='assets/mindfulness_photo.jpg';" alt="Taller de Bienestar Empresarial 5 - Constelaciones en Ventas y Liderazgo">
+                        <div class="workshop-caption">
+                            <span>Taller 5</span>
+                            <h4>Constelaciones en Ventas y Liderazgo</h4>
+                        </div>
+                    </div>
+                    <!-- Foto 6 -->
+                    <div class="workshop-slide">
+                        <img src="assets/carrusel_6.jpg" onerror="this.onerror=null;this.src='assets/danzoterapia_photo.jpg';" alt="Taller de Bienestar Empresarial 6 - Comunicación Consciente y Empatía">
+                        <div class="workshop-caption">
+                            <span>Taller 6</span>
+                            <h4>Comunicación Consciente y Empatía</h4>
+                        </div>
+                    </div>
+                    <!-- Foto 7 -->
+                    <div class="workshop-slide">
+                        <img src="assets/carrusel_7.jpg" onerror="this.onerror=null;this.src='assets/risoterapia_photo.jpg';" alt="Taller de Bienestar Empresarial 7 - Dinámicas de Trabajo en Equipo">
+                        <div class="workshop-caption">
+                            <span>Taller 7</span>
+                            <h4>Dinámicas de Trabajo en Equipo</h4>
+                        </div>
+                    </div>
+                    <!-- Foto 8 -->
+                    <div class="workshop-slide">
+                        <img src="assets/carrusel_8.jpg" onerror="this.onerror=null;this.src='assets/mindfulness_photo.jpg';" alt="Taller de Bienestar Empresarial 8 - Pausas Activas y Vitalidad">
+                        <div class="workshop-caption">
+                            <span>Taller 8</span>
+                            <h4>Pausas Activas y Vitalidad Diaria</h4>
+                        </div>
+                    </div>
+                    <!-- Foto 9 -->
+                    <div class="workshop-slide">
+                        <img src="assets/carrusel_9.jpg" onerror="this.onerror=null;this.src='assets/danzoterapia_photo.jpg';" alt="Taller de Bienestar Empresarial 9 - Salud Emocional para Equipos">
+                        <div class="workshop-caption">
+                            <span>Taller 9</span>
+                            <h4>Salud Emocional para Equipos</h4>
+                        </div>
+                    </div>
+                    <!-- Foto 10 -->
+                    <div class="workshop-slide">
+                        <img src="assets/carrusel_10.jpg" onerror="this.onerror=null;this.src='assets/profile_photo.jpg';" alt="Taller de Bienestar Empresarial 10 - Reconexión y Propósito Colectivo">
+                        <div class="workshop-caption">
+                            <span>Taller 10</span>
+                            <h4>Reconexión y Propósito Colectivo</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="workshop-controls">
+                    <div class="workshop-dots" id="workshopDots"></div>
+                    <div class="arrow-group">
+                        <button class="arrow-btn" id="wPrev" aria-label="Anterior">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M15 18l-6-6 6-6" />
+                            </svg>
+                        </button>
+                        <button class="arrow-btn" id="wNext" aria-label="Siguiente">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 18l6-6-6-6" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:2.5rem;">
+                <a href="https://wa.me/525534334147?text=Hola%2C%20me%20gustar%C3%ADa%20cotizar%20un%20Taller%20de%20Bienestar%20para%20mi%20Empresa" target="_blank" rel="noopener" class="btn btn-primary">
+                    Cotizar taller para tu empresa
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ RECONOCIMIENTOS ============ -->
+    <section class="section" id="reconocimientos">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Respaldo profesional</span>
+                <h2>Formación certificada y experiencia comprobable</h2>
+            </div>
+            <div class="cred-grid reveal-stagger">
+                <div class="cred-tile">
+                    <div class="cred-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round">
+                            <path d="M12 3 3 8l9 5 9-5-9-5Z" />
+                            <path d="M3 8v6l9 5 9-5V8" />
+                        </svg></div>
+                    <div>
+                        <h4>Instituto Mexicano de Psicooncología</h4>
+                        <p>Maestría en Tanatología · Cédula 15677547</p>
+                    </div>
+                </div>
+                <div class="cred-tile">
+                    <div class="cred-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round">
+                            <path d="M12 3 3 8l9 5 9-5-9-5Z" />
+                            <path d="M3 8v6l9 5 9-5V8" />
+                        </svg></div>
+                    <div>
+                        <h4>Universidad Mexicana, Campus Izcalli</h4>
+                        <p>Licenciatura en Psicología Social · Cédula 6113080</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="marquee-label">Empresas y grupos que han vivido nuestros talleres</p>
+            <div class="marquee reveal">
+                <div class="marquee-track">
+                    <span class="marquee-item"><i></i>Equipos corporativos</span>
+                    <span class="marquee-item"><i></i>Instituciones educativas</span>
+                    <span class="marquee-item"><i></i>Grupos de bienestar</span>
+                    <span class="marquee-item"><i></i>PyMEs y emprendedores</span>
+                    <span class="marquee-item"><i></i>Áreas de Recursos Humanos</span>
+                    <span class="marquee-item"><i></i>Equipos corporativos</span>
+                    <span class="marquee-item"><i></i>Instituciones educativas</span>
+                    <span class="marquee-item"><i></i>Grupos de bienestar</span>
+                    <span class="marquee-item"><i></i>PyMEs y emprendedores</span>
+                    <span class="marquee-item"><i></i>Áreas de Recursos Humanos</span>
+                </div>
+            </div>
+            <!-- Nota para el equipo: reemplaza esta franja por los logotipos reales de empresas/clientes cuando estén disponibles. -->
+        </div>
+    </section>
+
+    <div class="wave" style="color:var(--teal-deep)">
+        <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+            <path fill="currentColor" d="M0,40 C200,90 400,0 600,30 C800,60 1000,10 1200,40 L1200,80 L0,80 Z" />
+        </svg>
+    </div>
+
+    <!-- ============ PAGO Y RESERVACIONES ============ -->
+    <section class="section" id="pago" style="background:var(--teal-deep);padding-top:0;">
+        <div class="container">
+            <div class="pay-panel reveal">
+                <div class="pay-info">
+                    <span class="eyebrow">Reservaciones</span>
+                    <h2>Confirma tu cita en tres pasos simples</h2>
+                    <ul class="pay-steps">
+                        <li><span class="step-num">1</span>Realiza tu transferencia o depósito por el monto acordado en
+                            tu sesión o taller.</li>
+                        <li><span class="step-num">2</span>Toma una captura o foto legible de tu comprobante de pago.
+                        </li>
+                        <li><span class="step-num">3</span>Envíanos el comprobante por WhatsApp junto con tu nombre y el
+                            servicio elegido.</li>
+                    </ul>
+                    <div class="pay-actions">
+                        <a href="https://wa.me/525534334147?text=Hola%2C%20adjunto%20mi%20comprobante%20de%20pago"
+                            target="_blank" rel="noopener" class="btn btn-whatsapp">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                                <path
+                                    d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.5 0 9.96-4.46 9.96-9.96C21.99 6.46 17.54 2 12.04 2Zm5.8 14.24c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.13.11-1.82-.12-.42-.14-.96-.32-1.65-.63-2.9-1.25-4.8-4.16-4.94-4.35-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36h.56c.18 0 .42-.03.64.49.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.14-.3.3-.13.58.17.29.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.35 1.46.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.64-.14.26.1 1.66.78 1.94.93.29.14.48.22.55.34.07.12.07.68-.17 1.36Z" />
+                            </svg>
+                            Enviar comprobante
+                        </a>
+                        <a href="#" class="btn btn-outline">Ver preguntas frecuentes</a>
+                    </div>
+                </div>
+                <div class="pay-card">
+                    <div class="bank-card">
+                        <div class="bank-row"><span>Banco</span><strong>Banamex — Cuenta Oro</strong></div>
+                        <div class="bank-row"><span>Titular</span><strong>Nancy García Loyo</strong></div>
+                        <div class="bank-row">
+                            <div><span>No. de cuenta</span><strong id="acctNum">5204 1663 0298 2790</strong></div>
+                            <button class="copy-btn" data-copy="5204166302982790">Copiar</button>
+                        </div>
+                        <div class="bank-row">
+                            <div><span>CLABE interbancaria</span><strong id="clabeNum">0021 8070 2246 0583 62</strong>
+                            </div>
+                            <button class="copy-btn" data-copy="002180702246058362">Copiar</button>
+                        </div>
+                    </div>
+                    <p style="font-size:.82rem;color:rgba(255,255,255,.6);margin-top:1.2rem;">Tu información de pago es
+                        confidencial. Al confirmar tu comprobante, tu cita queda agendada en la línea de atención 24/7.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ UBICACIÓN ============ -->
+    <section class="section section-alt" id="ubicacion">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Ubicación y Consultorio</span>
+                <h2>Un espacio seguro y tranquilo para tu bienestar</h2>
+                <p>Atención presencial en nuestras instalaciones en Valle Dorado y sesiones en línea para cualquier parte del mundo.</p>
+            </div>
+            <div class="location-grid reveal">
+                <div class="location-card">
+                    <div class="location-item">
+                        <div class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round">
+                                <path d="M12 21s-7-4.5-7-11a7 7 0 0 1 14 0c0 6.5-7 11-7 11Z" />
+                                <circle cx="12" cy="10" r="2.6" />
+                            </svg></div>
+                        <div>
+                            <h4>Dirección del Consultorio</h4>
+                            <p style="font-weight:500;color:var(--ink);line-height:1.45;">Calzada de los Jinetes 4, primer piso, despacho 102, Fraccionamiento Valle Dorado, C.P. 54020, Tlalnepantla de Baz, Edomex, México.</p>
+                        </div>
+                    </div>
+                    <div class="location-item">
+                        <div class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round">
+                                <path
+                                    d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.12.9.33 1.8.63 2.7a2 2 0 0 1-.45 2.1L8.1 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.45c.87.3 1.77.51 2.7.63A2 2 0 0 1 22 16.9Z" />
+                            </svg></div>
+                        <div>
+                            <h4>Línea de Atención 24/7</h4>
+                            <p>55 3433 4147 · De lunes a domingo, tu salud es la prioridad.</p>
+                        </div>
+                    </div>
+                    <div class="location-item">
+                        <div class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round">
+                                <rect x="3" y="5" width="18" height="14" rx="2" />
+                                <path d="m3 7 9 6 9-6" />
+                            </svg></div>
+                        <div>
+                            <h4>Correo electrónico</h4>
+                            <p>expansionyb88@gmail.com</p>
+                        </div>
+                    </div>
+                    <div style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:.6rem;">
+                        <a href="https://www.google.com/maps/search/Calzada+de+los+Jinetes+4+primer+piso+despacho+102+Fraccionamiento+Valle+Dorado,+54020+Tlalnepantla+de+Baz,+Edomex,+M%C3%A9xico/@19.5546,-99.2122,17z?hl=es&entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D"
+                            target="_blank" rel="noopener" class="btn btn-primary" style="align-self:flex-start;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" style="margin-right:6px;"><path d="M12 21s-7-4.5-7-11a7 7 0 0 1 14 0c0 6.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                            Abrir en Google Maps
+                        </a>
+                        <a href="https://wa.me/525534334147?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20cita%20presencial%20en%20el%20consultorio%20de%20Valle%20Dorado"
+                            target="_blank" rel="noopener" class="btn btn-outline" style="align-self:flex-start;color:var(--teal-deep);border-color:var(--teal-deep);">
+                            Cómo llegar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="map-frame">
+                    <iframe src="https://maps.google.com/maps?q=Calzada+de+los+Jinetes+4+primer+piso+despacho+102+Fraccionamiento+Valle+Dorado,+54020+Tlalnepantla+de+Baz,+Edomex,+M%C3%A9xico&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa de ubicación en Calzada de los Jinetes 4, Fraccionamiento Valle Dorado, Tlalnepantla de Baz, Edomex">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-cta reveal">
+                <span class="eyebrow" style="justify-content:center;color:var(--sage)">Da el primer paso</span>
+                <h2>¿Tienes dudas? Comienza tu bienestar hoy.</h2>
+                <p>Escríbenos y con gusto te acompañamos a elegir la terapia ideal para tu momento de vida.</p>
+                <div class="hero-ctas">
+                    <a href="#pago" class="btn btn-primary">Agenda tu sesión</a>
+                    <a href="https://wa.me/525534334147" target="_blank" rel="noopener" class="btn btn-outline">Hablar
+                        por WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand" style="margin-bottom:.4rem;">
+                        <img src="assets/logo.jpg" alt="Logotipo Expansión y Bienestar" style="height:40px;">
+                        <span class="brand-name">Expansión<span>y Bienestar</span></span>
+                    </div>
+                    <p>Tu bienestar, nuestra alegría. Acompañamiento terapéutico integral para sanar, transformar y
+                        florecer.</p>
+                    <div class="social-row">
+                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M13.5 9H16V6h-2.5C11.6 6 10 7.6 10 9.9V12H8v3h2v6h3v-6h2.4l.6-3h-3V10c0-.6.4-1 1-1Z" />
+                            </svg></a>
+                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8">
+                                <rect x="3" y="3" width="18" height="18" rx="5" />
+                                <circle cx="12" cy="12" r="3.6" />
+                                <circle cx="17.2" cy="6.8" r="1" />
+                            </svg></a>
+                        <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.5 0 9.96-4.46 9.96-9.96C21.99 6.46 17.54 2 12.04 2Z" />
+                            </svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Explorar</h5>
+                    <ul>
+                        <li><a href="#sobre-mi">Sobre mí</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#talleres">Talleres corporativos</a></li>
+                        <li><a href="#reconocimientos">Respaldo profesional</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Contacto</h5>
+                    <ul>
+                        <li>WhatsApp: 55 3433 4147</li>
+                        <li>expansionyb88@gmail.com</li>
+                        <li>Línea 24/7 · Lunes a domingo</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© <span id="year"></span> Expansión y Bienestar. Todos los derechos reservados.</span>
+                <span>Diseñado con calma y propósito.</span>
+            </div>
+        </div>
+    </footer>
+
+    <a class="float-wa" href="https://wa.me/525534334147" target="_blank" rel="noopener"
+        aria-label="Escribir por WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+                d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.5 0 9.96-4.46 9.96-9.96C21.99 6.46 17.54 2 12.04 2Zm5.8 14.24c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.13.11-1.82-.12-.42-.14-.96-.32-1.65-.63-2.9-1.25-4.8-4.16-4.94-4.35-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36h.56c.18 0 .42-.03.64.49.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.14-.3.3-.13.58.17.29.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.35 1.46.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.64-.14.26.1 1.66.78 1.94.93.29.14.48.22.55.34.07.12.07.68-.17 1.36Z" />
+        </svg>
+    </a>
+
+    <!-- ============ MODAL DETALLES DE SERVICIOS ============ -->
+    <div class="service-modal-overlay" id="serviceModal" aria-hidden="true">
+        <div class="service-modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="modal-close-btn" id="modalCloseBtn" aria-label="Cerrar ventana">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <span class="modal-badge-tag" id="modalBadge">Servicio Terapéutico</span>
+            <h2 class="modal-title" id="modalTitle">Título del Servicio</h2>
+            <div class="modal-motto" id="modalMotto">Lema del servicio</div>
+            <div class="modal-content-body" id="modalBody">
+                <!-- Se inyecta dinámicamente con JavaScript -->
+            </div>
+            <div class="modal-footer-cta">
+                <div>
+                    <span style="font-size:.82rem;color:var(--ink-soft);display:block;">Atención personalizada 24/7</span>
+                    <strong style="color:var(--teal-deep);font-size:1.05rem;">55 3433 4147</strong>
+                </div>
+                <a href="#" id="modalWaBtn" target="_blank" rel="noopener" class="btn btn-whatsapp" style="padding:.85em 1.5em;">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.5 0 9.96-4.46 9.96-9.96C21.99 6.46 17.54 2 12.04 2Zm5.8 14.24c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.13.11-1.82-.12-.42-.14-.96-.32-1.65-.63-2.9-1.25-4.8-4.16-4.94-4.35-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36h.56c.18 0 .42-.03.64.49.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.14-.3.3-.13.58.17.29.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.35 1.46.29.14.48.22.55.34.07.12.07.68-.17 1.36Z"/></svg>
+                    Agendar este servicio
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile nav toggle
+        const navToggle = document.getElementById('navToggle');
+        const mainNav = document.getElementById('mainNav');
+        navToggle.addEventListener('click', () => {
+            const isOpen = mainNav.classList.toggle('open');
+            navToggle.setAttribute('aria-expanded', isOpen);
+        });
+        mainNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+            mainNav.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', false);
+        }));
+
+        // Scroll reveal
+        const revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        revealEls.forEach(el => io.observe(el));
+
+        // Workshop carousel - Transición linda, fluida y automática
+        const track = document.getElementById('workshopTrack');
+        const dotsWrap = document.getElementById('workshopDots');
+        const workshopWrap = document.querySelector('.workshop-wrap');
+        const slides = Array.from(track.children);
+        let currentIndex = 0;
+        let autoplayTimer = null;
+        let isHovered = false;
+
+        // Crear botones indicadores (dots)
+        slides.forEach((slide, i) => {
+            const dot = document.createElement('button');
+            dot.setAttribute('aria-label', `Ir a diapositiva ${i + 1}`);
+            if (i === 0) {
+                dot.classList.add('active');
+                slide.classList.add('is-active');
+            }
+            dot.addEventListener('click', () => {
+                goToSlide(i);
+                resetAutoplay();
+            });
+            dotsWrap.appendChild(dot);
+        });
+
+        function goToSlide(i) {
+            if (i < 0) i = slides.length - 1;
+            if (i >= slides.length) i = 0;
+            currentIndex = i;
+
+            const targetSlide = slides[currentIndex];
+            if (targetSlide) {
+                const scrollLeft = targetSlide.offsetLeft - track.offsetLeft;
+                track.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+            }
+
+            updateActiveState(currentIndex);
+        }
+
+        function updateActiveState(index) {
+            slides.forEach((s, idx) => {
+                s.classList.toggle('is-active', idx === index);
+            });
+            [...dotsWrap.children].forEach((d, idx) => {
+                d.classList.toggle('active', idx === index);
+            });
+        }
+
+        function startAutoplay() {
+            stopAutoplay();
+            autoplayTimer = setInterval(() => {
+                if (!isHovered) {
+                    goToSlide((currentIndex + 1) % slides.length);
+                }
+            }, 3800);
+        }
+
+        function stopAutoplay() {
+            if (autoplayTimer) {
+                clearInterval(autoplayTimer);
+                autoplayTimer = null;
+            }
+        }
+
+        function resetAutoplay() {
+            stopAutoplay();
+            startAutoplay();
+        }
+
+        // Flechas anterior y siguiente
+        document.getElementById('wPrev').addEventListener('click', () => {
+            goToSlide((currentIndex - 1 + slides.length) % slides.length);
+            resetAutoplay();
+        });
+
+        document.getElementById('wNext').addEventListener('click', () => {
+            goToSlide((currentIndex + 1) % slides.length);
+            resetAutoplay();
+        });
+
+        // Pausar con el cursor o al tocar en pantallas táctiles
+        if (workshopWrap) {
+            workshopWrap.addEventListener('mouseenter', () => { isHovered = true; });
+            workshopWrap.addEventListener('mouseleave', () => { isHovered = false; });
+            workshopWrap.addEventListener('touchstart', () => { isHovered = true; }, { passive: true });
+            workshopWrap.addEventListener('touchend', () => {
+                isHovered = false;
+                resetAutoplay();
+            }, { passive: true });
+        }
+
+        // Sincronizar estado cuando el usuario hace scroll manual o swipe
+        let scrollTimeout;
+        track.addEventListener('scroll', () => {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                const trackLeft = track.getBoundingClientRect().left;
+                let closest = 0, minDist = Infinity;
+                slides.forEach((s, i) => {
+                    const dist = Math.abs(s.getBoundingClientRect().left - trackLeft);
+                    if (dist < minDist) {
+                        minDist = dist;
+                        closest = i;
+                    }
+                });
+                if (closest !== currentIndex) {
+                    currentIndex = closest;
+                    updateActiveState(currentIndex);
+                }
+            }, 80);
+        }, { passive: true });
+
+        // Iniciar pase automático de imágenes
+        startAutoplay();
+
+        // Copy to clipboard
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', async () => {
+                const val = btn.getAttribute('data-copy');
+                try {
+                    await navigator.clipboard.writeText(val);
+                    const original = btn.textContent;
+                    btn.textContent = '¡Copiado!';
+                    setTimeout(() => btn.textContent = original, 1800);
+                } catch (e) {
+                    alert('Copia este dato manualmente: ' + val);
+                }
+            });
+        });
+
+        // Service details modal data & logic
+        const servicesData = {
+            "1": {
+                badge: "Servicio 1 · Costo $700",
+                title: "Constelaciones Familiares / Tanatología Sistémica",
+                motto: "¡También contamos con paquetes!",
+                waMsg: "Hola, me interesa agendar Constelaciones Familiares / Tanatología Sistémica (Costo $700)",
+                html: `
+                    <div>
+                        <h4 class="modal-section-title">Especialidades incluidas</h4>
+                        <ul class="modal-list">
+                            <li><strong>Constelaciones Familiares:</strong> Sanación de dinámicas inconscientes y vínculos en el sistema familiar.</li>
+                            <li><strong>Constelaciones en Ventas:</strong> Liberación de bloqueos energéticos con el dinero, clientes y abundancia en tu negocio.</li>
+                            <li><strong>Tanatología Sistémica:</strong> Acompañamiento en procesos de duelo y pérdidas con visión integral.</li>
+                        </ul>
+                    </div>
+                    <div style="background:var(--paper-alt);padding:1rem 1.2rem;border-radius:var(--radius-sm);border:1px solid var(--line);">
+                        <strong style="color:var(--teal-deep);display:block;margin-bottom:.3rem;">Inversión por sesión:</strong>
+                        <p style="font-size:1.15rem;font-weight:700;color:var(--gold-deep);margin:0 0 .3rem;">$700 MXN</p>
+                        <p style="font-size:.85rem;color:var(--ink-soft);margin:0;">Pregunta por nuestros paquetes especiales para procesos continuos o grupales.</p>
+                    </div>
+                `
+            },
+            "2": {
+                badge: "Servicio 2 · Terapia Energética",
+                title: "Bioactivación Energética Kundalini",
+                motto: "Despierta tu energía, transforma tu vida · Tu bienestar comienza desde tu energía.",
+                waMsg: "Hola, me interesa agendar una sesión de Bioactivación Energética Kundalini",
+                html: `
+                    <div>
+                        <h4 class="modal-section-title">¿Qué es la Bioactivación Energética Kundalini?</h4>
+                        <p>Es un proceso de armonización y activación de tu energía vital que despierta tu conciencia, libera bloqueos y eleva tu vibración. Activa tu poder interior y te conecta con tu esencia espiritual.</p>
+                    </div>
+                    <div>
+                        <h4 class="modal-section-title">¿Para qué sirve?</h4>
+                        <ul class="modal-list">
+                            <li>Equilibra cuerpo, mente y espíritu.</li>
+                            <li>Libera bloqueos emocionales y energéticos.</li>
+                            <li>Aumenta tu energía vital y tu bienestar.</li>
+                            <li>Despierta tu conciencia y tu propósito de vida.</li>
+                            <li>Armoniza tus chakras y campo energético.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="modal-section-title">¿Cuáles son sus funciones?</h4>
+                        <ul class="modal-list">
+                            <li>Activa la energía Kundalini de forma segura y guiada.</li>
+                            <li>Limpia y purifica tu sistema energético.</li>
+                            <li>Armoniza tus centros de energía (chakras).</li>
+                            <li>Eleva tu frecuencia vibratoria.</li>
+                            <li>Reconecta tu cuerpo físico, mental, emocional y espiritual.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="modal-section-title">¿A qué tipo de personas va dirigido?</h4>
+                        <ul class="modal-list">
+                            <li>Personas que buscan bienestar integral y crecimiento personal.</li>
+                            <li>Quienes viven estrés, ansiedad o cansancio constante.</li>
+                            <li>Personas en procesos de cambio o transformación.</li>
+                            <li>Terapeutas, coaches y buscadores espirituales.</li>
+                            <li>Cualquier persona que desee conectar con su poder interior.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="modal-section-title">Beneficios de tener una Bioactivación</h4>
+                        <ul class="modal-list">
+                            <li>Mayor claridad mental y enfoque.</li>
+                            <li>Bienestar físico y emocional duradero.</li>
+                            <li>Reducción profunda del estrés y la ansiedad.</li>
+                            <li>Mejora del sueño y la vitalidad diaria.</li>
+                            <li>Aumento de la autoestima y la confianza.</li>
+                            <li>Conexión espiritual profunda, plenitud, paz y felicidad.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="modal-section-title">¿Cómo es el proceso?</h4>
+                        <div class="modal-step-box">
+                            <div class="modal-step-item"><span class="modal-step-num">1</span><span><strong>Evaluación energética personalizada:</strong> Diagnóstico de tus necesidades y centros energéticos.</span></div>
+                            <div class="modal-step-item"><span class="modal-step-num">2</span><span><strong>Activación y armonización:</strong> Inducción segura de la energía vital.</span></div>
+                            <div class="modal-step-item"><span class="modal-step-num">3</span><span><strong>Liberación de bloqueos:</strong> Descarga de memorias energéticas estancadas.</span></div>
+                            <div class="modal-step-item"><span class="modal-step-num">4</span><span><strong>Integración y alineación:</strong> Anclaje de la nueva frecuencia en tu cuerpo y mente.</span></div>
+                            <div class="modal-step-item"><span class="modal-step-num">5</span><span><strong>Recomendaciones continuas:</strong> Guía para mantener tu alta vibración en tu día a día.</span></div>
+                        </div>
+                    </div>
+                `
+            },
+            "3": {
+                badge: "Servicio 3 · Transformación Sistémica",
+                title: "Constelaciones que Transforman tu Vida",
+                motto: "Todo está conectado, todo tiene un orden, todo tiene una solución.",
+                waMsg: "Hola, me interesa agendar Constelaciones que Transforman tu Vida (Familiares / Ventas)",
+                html: `
+                    <div>
+                        <h4 class="modal-section-title">Constelaciones Familiares</h4>
+                        <p><strong>¿Qué son?</strong> Es una herramienta terapéutica creada por el psicoterapeuta alemán Bert Hellinger en la década de 1990, basada en las "Órdenes del Amor" y la sabiduría de los sistemas familiares para sanar dinámicas ocultas.</p>
+                        <p style="margin-top:.5rem;"><strong>¿Para quiénes son?</strong> Para cualquier persona que desee sanar patrones familiares, mejorar sus relaciones, liberarse de cargas emocionales o dejar de repetir historias que no le pertenecen.</p>
+                        <ul class="modal-list" style="margin-top:.7rem;">
+                            <li>Sanación de heridas emocionales y vínculos familiares (padres, hijos, pareja).</li>
+                            <li>Liberación de lealtades inconscientes y patrones repetitivos.</li>
+                            <li>Mayor paz interior, claridad y propósito de vida.</li>
+                            <li>Reconexión con tu fuerza, tu historia y tu lugar en el sistema.</li>
+                        </ul>
+                    </div>
+                    <div style="border-top:1px solid var(--line);padding-top:1.2rem;">
+                        <h4 class="modal-section-title">Constelaciones en Ventas y Negocios</h4>
+                        <p><strong>¿Qué son?</strong> Son una aplicación especializada que permite identificar y liberar bloqueos inconscientes relacionados con el dinero, la abundancia, el éxito y los clientes, alineando tu energía con el flujo natural de dar y recibir.</p>
+                        <ul class="modal-list" style="margin-top:.7rem;">
+                            <li>Atraes clientes ideales con mayor facilidad.</li>
+                            <li>Aumentas tus ventas, tus ingresos y tu prosperidad.</li>
+                            <li>Superas miedos, creencias limitantes y bloqueos con el dinero.</li>
+                            <li>Mejoras tu comunicación, confianza y liderazgo.</li>
+                        </ul>
+                        <p style="margin-top:.7rem;"><strong>¿Para quiénes es?</strong> Emprendedores, empresarios, vendedores, asesores, líderes y equipos de trabajo que sienten bloqueos al comunicar o vender.</p>
+                    </div>
+                    <div>
+                        <h4 class="modal-section-title">Recursos que obtendrás</h4>
+                        <p>Mayor amor propio, relaciones sanas, claridad emocional, dirección, abundancia y conexión profunda con tu esencia y poder personal.</p>
+                    </div>
+                `
+            },
+            "4": {
+                badge: "Servicio 4 · Bienestar y Vitalidad",
+                title: "Risoterapia",
+                motto: "La risa que transforma tu vida · Reír es natural, sanar es posible, ¡vivir es mejor!",
+                waMsg: "Hola, me interesa agendar una sesión de Risoterapia (Individual o Empresa)",
+                html: `
+                    <div>
+                        <h4 class="modal-section-title">¿Para qué funciona la Risoterapia?</h4>
+                        <p>Utiliza la risa como herramienta terapéutica para mejorar el bienestar físico, emocional y mental. A través de ejercicios lúdicos y dinámicos, se estimula la risa de manera consciente para generar beneficios reales en tu vida diaria.</p>
+                    </div>
+                    <div>
+                        <h4 class="modal-section-title">¿Cuáles son sus beneficios?</h4>
+                        <ul class="modal-list">
+                            <li>Reduce el estrés, la ansiedad y la tensión muscular.</li>
+                            <li>Mejora el estado de ánimo y aumenta la felicidad mediante la liberación de endorfinas.</li>
+                            <li>Fortalece el sistema inmunológico.</li>
+                            <li>Mejora la respiración, la oxigenación celular y la capacidad pulmonar.</li>
+                            <li>Fomenta la conexión, la empatía y el trabajo en equipo.</li>
+                            <li>Aumenta la energía vital y la resiliencia ante el día a día.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="modal-section-title">¿De dónde viene la Risoterapia?</h4>
+                        <p>Fue creada en 1995 por el médico indio Dr. Madan Kataria, quien se inspiró en la premisa: <em>"La risa no es solo una respuesta, es una herramienta para una vida mejor"</em>. Desde entonces, se ha expandido globalmente como una práctica científica y complementaria de salud.</p>
+                    </div>
+                    <div>
+                        <h4 class="modal-section-title">¿Cómo es una sesión?</h4>
+                        <p>A través de juegos, ejercicios de respiración consciente, dinámicas grupales y movimientos simples, se induce la risa de forma natural y contagiosa. <strong>¡No necesitas tener sentido del humor, solo ganas de pasarlo bien!</strong></p>
+                    </div>
+                `
+            },
+            "5": {
+                badge: "Servicio 5 · Presencia y Calma",
+                title: "Mindfulness",
+                motto: "Atención plena para transformar tu vida · Tu salud es mi prioridad.",
+                waMsg: "Hola, me interesa agendar terapia de Mindfulness",
+                html: `
+                    <div>
+                        <h4 class="modal-section-title">¿Por qué hacer terapia de Mindfulness?</h4>
+                        <p>Porque te ayuda a vivir el presente con mayor claridad, reducir el estrés y la ansiedad, mejorar tus relaciones interpersonales y conectar contigo mismo desde un espacio de calma y aceptación incondicional.</p>
+                    </div>
+                    <div>
+                        <h4 class="modal-section-title">¿Cuáles son los beneficios?</h4>
+                        <ul class="modal-list">
+                            <li>Disminuye el estrés, la ansiedad y la rumiación mental.</li>
+                            <li>Mejora la concentración, el enfoque y la memoria de trabajo.</li>
+                            <li>Favorece el equilibrio emocional y la autorregulación.</li>
+                            <li>Aumenta la empatía, la compasión y la conexión con los demás.</li>
+                            <li>Promueve una sensación profunda de bienestar físico y mental.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="modal-section-title">¿Qué es lo que estarías sanando?</h4>
+                        <ul class="modal-list">
+                            <li>Heridas emocionales del pasado no resueltas.</li>
+                            <li>Patrones de pensamiento negativos, críticos y repetitivos.</li>
+                            <li>Desconexión contigo mismo y con tu entorno.</li>
+                            <li>Estrés acumulado, sobrecarga mental y agotamiento emocional (burnout).</li>
+                            <li>Falta de propósito, sentido y paz interior.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="modal-section-title">¿Cuál es el objetivo?</h4>
+                        <p>Desarrollar una mente consciente y tranquila, aprender a gestionar tus emociones, y vivir con mayor presencia, propósito y gratitud cotidiana.</p>
+                    </div>
+                `
+            },
+            "6": {
+                badge: "Servicio 6 · Expresión Corporal",
+                title: "Danzaterapia (Danzoterapia)",
+                motto: "El movimiento que sana, transforma y libera · Tu bienestar, en movimiento.",
+                waMsg: "Hola, me interesa agendar una sesión de Danzaterapia",
+                html: `
+                    <div>
+                        <h4 class="modal-section-title">¿Cuáles son las funciones de la Danzaterapia?</h4>
+                        <ul class="modal-list">
+                            <li>Favorece la conexión integral cuerpo-mente-emoción.</li>
+                            <li>Ayuda a expresar y procesar lo que las palabras no alcanzan.</li>
+                            <li>Promueve el autoconocimiento, la confianza y la autoestima.</li>
+                            <li>Mejora la comunicación y la relación con los demás.</li>
+                            <li>Estimula la vitalidad y la calidad de vida.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="modal-section-title">¿Cómo sana los traumas a nivel corporal?</h4>
+                        <p>A través del movimiento consciente y libre, el cuerpo libera tensiones y memorias dolorosas almacenadas en los tejidos. Se trabaja con la respiración, la música y la expresión corporal para liberar emociones atrapadas, permitiendo resignificar experiencias difíciles desde una sensación de total seguridad y contención.</p>
+                        <p style="margin-top:.4rem;font-style:italic;color:var(--teal);">"El cuerpo recuerda, pero también puede sanar cuando se mueve, siente y se expresa."</p>
+                    </div>
+                    <div>
+                        <h4 class="modal-section-title">Beneficios de asistir a Danzaterapia</h4>
+                        <ul class="modal-list">
+                            <li>Reducción del estrés, ansiedad y síntomas depresivos.</li>
+                            <li>Mayor flexibilidad corporal, soltura y vitalidad.</li>
+                            <li>Liberación emocional y alivio de cargas internas.</li>
+                            <li>Mejora en la calidad del sueño y la concentración.</li>
+                            <li>Sensación renovada de plenitud, alegría y bienestar general.</li>
+                        </ul>
+                    </div>
+                `
+            },
+            "7": {
+                badge: "Servicio 7 · Duelo y Propósito",
+                title: "Tanatología",
+                motto: "Acompañamiento para transformar tu dolor en bienestar y propósito · Sanar es transformar y volver a elegirte.",
+                waMsg: "Hola, me interesa agendar una sesión de Tanatología",
+                html: `
+                    <div>
+                        <h4 class="modal-section-title">¿Para qué acudir a Tanatología?</h4>
+                        <ul class="modal-list">
+                            <li>Cuando enfrentas una pérdida significativa (muerte de un ser querido, ruptura de pareja, cambio laboral o de vida).</li>
+                            <li>Si sientes tristeza profunda, vacío, culpa, enojo o confusión que no logras superar.</li>
+                            <li>Si buscas comprender y transitar tu proceso de duelo de forma saludable.</li>
+                            <li>Si deseas encontrar sentido, paz y herramientas prácticas para seguir adelante.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="modal-section-title">¿Qué se trabaja en un proceso tanatológico?</h4>
+                        <ul class="modal-list">
+                            <li>Comprender y aceptar las etapas del duelo.</li>
+                            <li>Expresar y gestionar las emociones difíciles en un espacio seguro.</li>
+                            <li>Identificar creencias y patrones que generan sufrimiento innecesario.</li>
+                            <li>Fortalecer la autoestima, el amor propio y la resiliencia.</li>
+                            <li>Reconstruir tu proyecto de vida con un nuevo y profundo significado.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="modal-section-title">5 Puntos de Sanación Tanatológica</h4>
+                        <div class="modal-step-box">
+                            <div class="modal-step-item"><span class="modal-step-num">1</span><span><strong>Aceptación:</strong> Abrazar la realidad del cambio con serenidad.</span></div>
+                            <div class="modal-step-item"><span class="modal-step-num">2</span><span><strong>Perdón:</strong> Soltar culpas, rencores y reproches hacia ti y los demás.</span></div>
+                            <div class="modal-step-item"><span class="modal-step-num">3</span><span><strong>Liberación emocional:</strong> Dar cauce al dolor estancado.</span></div>
+                            <div class="modal-step-item"><span class="modal-step-num">4</span><span><strong>Reconexión contigo mismo:</strong> Redescubrir tu centro y valor intrínseco.</span></div>
+                            <div class="modal-step-item"><span class="modal-step-num">5</span><span><strong>Propósito y sentido de vida:</strong> Proyectar un futuro con plenitud y esperanza.</span></div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="modal-section-title">¿Qué obtendrás al final de tu proceso?</h4>
+                        <p>Paz interior, fortaleza para afrontar la vida, claridad en tu propósito, relaciones más sanas y conscientes, y una vida vivida con más sentido, plenitud y gratitud.</p>
+                    </div>
+                `
+            }
+        };
+
+        const modalOverlay = document.getElementById('serviceModal');
+        const modalBadge = document.getElementById('modalBadge');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalMotto = document.getElementById('modalMotto');
+        const modalBody = document.getElementById('modalBody');
+        const modalWaBtn = document.getElementById('modalWaBtn');
+        const modalCloseBtn = document.getElementById('modalCloseBtn');
+
+        document.querySelectorAll('[data-open-modal]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const id = btn.getAttribute('data-open-modal');
+                const data = servicesData[id];
+                if (!data) return;
+
+                modalBadge.textContent = data.badge;
+                modalTitle.textContent = data.title;
+                modalMotto.textContent = data.motto;
+                modalBody.innerHTML = data.html;
+                modalWaBtn.href = `https://wa.me/525534334147?text=${encodeURIComponent(data.waMsg)}`;
+
+                modalOverlay.classList.add('active');
+                modalOverlay.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        function closeModal() {
+            modalOverlay.classList.remove('active');
+            modalOverlay.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        modalCloseBtn.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) closeModal();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modalOverlay.classList.contains('active')) closeModal();
+        });
+    </script>
+</body>
+
+</html>
