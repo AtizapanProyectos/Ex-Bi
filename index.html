@@ -637,6 +637,11 @@
             text-align: left;
         }
 
+        .social-pill-btn:hover {
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, .28) !important;
+        }
+
         .about-content {
             display: flex;
             flex-direction: column;
@@ -845,7 +850,9 @@
             background: var(--gold);
             flex: none;
             display: block;
-        }        /* ============ SERVICIOS ============ */
+        }
+
+        /* ============ SERVICIOS ============ */
         .section-head {
             max-width: 58ch;
             margin-bottom: clamp(2.4rem, 5vw, 3.6rem);
@@ -900,6 +907,35 @@
             transform: translateY(-8px);
             box-shadow: var(--shadow);
             border-color: transparent;
+        }
+
+        .service-img-wrap {
+            position: relative;
+            width: 100%;
+            height: 180px;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            margin-bottom: 1.2rem;
+            background: var(--paper-alt);
+        }
+
+        .service-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .6s var(--ease);
+            display: block;
+        }
+
+        .service-card:hover .service-img-wrap img {
+            transform: scale(1.06);
+        }
+
+        .service-img-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(13,38,36,0.3) 100%);
+            pointer-events: none;
         }
 
         .service-card-top {
@@ -1947,6 +1983,14 @@
                 <a href="#reconocimientos">Respaldo</a>
                 <a href="#pago">Reservaciones</a>
                 <a href="#ubicacion">Ubicación</a>
+                <div class="nav-socials" style="display:inline-flex;gap:.35rem;align-items:center;margin:0 .2rem;">
+                    <a href="https://www.instagram.com/nancygarcialoyopsico?utm_source=qr&igsi=MTJ3OXdlbjd1d2d4bw==" target="_blank" rel="noopener" aria-label="Instagram" style="padding:.4rem;color:var(--ink);display:flex;align-items:center;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" width="18" height="18"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@expansin33?_r=1&_t=ZS-998qAoz3TF4" target="_blank" rel="noopener" aria-label="TikTok" style="padding:.4rem;color:var(--ink);display:flex;align-items:center;">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 1 1-5.2-1.74 2.89 2.89 0 0 1 2.31-2.82V7.58a6.34 6.34 0 0 0-3.56 1.01 6.34 6.34 0 1 0 10.9 4.39V8.65a8.22 8.22 0 0 0 4.77 1.49V6.69a4.83 4.83 0 0 1-2-.01z"/></svg>
+                    </a>
+                </div>
                 <a class="btn btn-ghost" href="#pago">Agenda tu sesión</a>
             </nav>
             <button class="nav-toggle" id="navToggle" aria-label="Abrir menú"
@@ -1970,7 +2014,8 @@
                 </div>
                 <div class="hero-trust">
                     <div><strong>7</strong>servicios terapéuticos</div>
-                    <div><strong>De 6 a 7</strong>horario de atención</div>
+                    <div><strong>6 am - 7 pm</strong>línea de atención</div>
+
                 </div>
             </div>
             <div class="hero-art">
@@ -2011,7 +2056,7 @@
         <div class="container about-grid">
             <div class="about-photo-col reveal">
                 <div class="about-photo-frame">
-                    <img src="assets/profile_photo.jpg" alt="Mtra. Nancy García Loyo · Psicoterapeuta y Tanatóloga">
+                    <img src="assets/profile_photo.jpg" alt="Nancy García Loyo · Psicoterapeuta y Tanatóloga">
                     <div class="about-photo-badge">
                         <div class="about-badge-icon">
                             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -2020,7 +2065,8 @@
                             </svg>
                         </div>
                         <div>
-                            <strong style="font-size:1.4rem;font-weight:700;line-height:1.2;color:#fff;">Mtra. Nancy García Loyo</strong>
+                            <strong> Mtra. Nancy García Loyo</strong>
+                            <span>Acompañamiento profesional</span>
                         </div>
                     </div>
                 </div>
@@ -2028,7 +2074,8 @@
             <div class="about-content">
                 <div class="about-intro reveal">
                     <span class="eyebrow">Sobre mí</span>
-                    <h2>Un acompañamiento<br>humano, cálido y<br>profesional.</h2>
+                    <h2 style="font-size: clamp(2.4rem, 5.2vw, 3.6rem); line-height: 1.1; margin-bottom: 0.6rem; color: var(--teal-deep); font-family: 'Fraunces', serif;">Mtra. Nancy García Loyo</h2>
+                    <p style="font-size: 1.22rem; font-weight: 600; color: var(--gold-deep); margin-bottom: 1rem; line-height: 1.35; font-family: 'Fraunces', serif;">Un acompañamiento humano, cálido y profesional.</p>
                     <p class="about-desc">Creo en la terapia como un puente entre el dolor y el propósito. Cada sesión
                         está diseñada para que encuentres claridad, herramientas y un espacio seguro donde reconstruir
                         tu bienestar desde el amor propio.</p>
@@ -2084,45 +2131,65 @@
             <div class="section-head reveal">
                 <span class="eyebrow">Catálogo Oficial de Servicios</span>
                 <h2>Herramientas para sanar cuerpo, mente y espíritu</h2>
-                <p>Nuestros 7 servicios y enfoques terapéuticos especializados para acompañar tu proceso de bienestar, transformación y propósito.</p>
+                <p>Nuestros 7 servicios y enfoques terapéuticos especializados para acompañar tu proceso de bienestar,
+                    transformación y propósito.</p>
             </div>
             <div class="services-grid reveal-stagger">
 
                 <!-- SERVICIO 1 -->
                 <article class="service-card" style="--accent:var(--teal)">
+                    <div class="service-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=700&q=80" alt="Constelaciones Familiares / Tanatología Sistémica" loading="lazy">
+                        <div class="service-img-overlay"></div>
+                    </div>
                     <div class="service-card-top">
                         <div class="service-badge-row">
                             <div class="service-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
-                                    <path d="M12 21s-7-4.5-9-9c-1.4-3 1-6 4-6 2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3 0 5.4 3 4 6-2 4.5-9 9-9 9Z" />
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round">
+                                    <path
+                                        d="M12 21s-7-4.5-9-9c-1.4-3 1-6 4-6 2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3 0 5.4 3 4 6-2 4.5-9 9-9 9Z" />
                                 </svg>
                             </div>
                             <span class="service-price-pill">Costo $700</span>
                         </div>
                         <h3>Constelaciones Familiares / Tanatología Sistémica</h3>
                         <span class="service-motto">Ventas · Tanatología Sistémica · Paquetes</span>
-                        <p>Acompañamiento sistémico para sanar dinámicas familiares, superar bloqueos en tus ventas y dar sentido y cierre amoroso a tus procesos de pérdida.</p>
+                        <p>Acompañamiento sistémico para sanar dinámicas familiares, superar bloqueos en tus ventas y
+                            dar sentido y cierre amoroso a tus procesos de pérdida.</p>
                         <ul class="service-bullets">
                             <li>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                                 <span>Constelaciones Familiares y en Ventas</span>
                             </li>
                             <li>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                                 <span>Tanatología Sistémica integral</span>
                             </li>
                             <li>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                                 <span>¡También contamos con paquetes!</span>
                             </li>
                         </ul>
                     </div>
                     <div class="service-card-actions">
                         <button class="btn-service-detail" data-open-modal="1">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"
+                                height="16">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                            </svg>
                             Ver información completa
                         </button>
-                        <a href="https://wa.me/525534334147?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20Constelaciones%20Familiares%20%2F%20Tanatolog%C3%ADa%20Sist%C3%A9mica%20(Costo%20%24700)" target="_blank" rel="noopener" class="btn-service-wa">
+                        <a href="https://wa.me/525534334147?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20Constelaciones%20Familiares%20%2F%20Tanatolog%C3%ADa%20Sist%C3%A9mica%20(Costo%20%24700)"
+                            target="_blank" rel="noopener" class="btn-service-wa">
                             Agendar por WhatsApp
                         </a>
                     </div>
@@ -2130,39 +2197,58 @@
 
                 <!-- SERVICIO 2 -->
                 <article class="service-card" style="--accent:var(--coral)">
+                    <div class="service-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=700&q=80" alt="Bioactivación Energética Kundalini" loading="lazy">
+                        <div class="service-img-overlay"></div>
+                    </div>
                     <div class="service-card-top">
                         <div class="service-badge-row">
                             <div class="service-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
-                                    <path d="M12 21V3m0 0c-2 2-2 4 0 6m0-6c2 2 2 4 0 6m0 0c-2 2-2 4 0 6m0-6c2 2 2 4 0 6" />
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round">
+                                    <path
+                                        d="M12 21V3m0 0c-2 2-2 4 0 6m0-6c2 2 2 4 0 6m0 0c-2 2-2 4 0 6m0-6c2 2 2 4 0 6" />
                                 </svg>
                             </div>
                             <span class="service-price-pill">Costo $500</span>
                         </div>
                         <h3>Bioactivación Energética Kundalini</h3>
                         <span class="service-motto">Despierta tu energía, transforma tu vida</span>
-                        <p>Proceso de armonización y activación de tu energía vital que despierta tu conciencia, libera bloqueos y eleva tu vibración para conectar con tu esencia.</p>
+                        <p>Proceso de armonización y activación de tu energía vital que despierta tu conciencia, libera
+                            bloqueos y eleva tu vibración para conectar con tu esencia.</p>
                         <ul class="service-bullets">
                             <li>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                                 <span>Armoniza chakras y campo energético</span>
                             </li>
                             <li>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                                 <span>Libera estrés, ansiedad y bloqueos</span>
                             </li>
                             <li>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                                 <span>Evaluación y alineación en 5 pasos</span>
                             </li>
                         </ul>
                     </div>
                     <div class="service-card-actions">
                         <button class="btn-service-detail" data-open-modal="2">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"
+                                height="16">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                            </svg>
                             Ver información completa
                         </button>
-                        <a href="https://wa.me/525534334147?text=Hola%2C%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20de%20Bioactivaci%C3%B3n%20Energ%C3%A9tica%20Kundalini" target="_blank" rel="noopener" class="btn-service-wa">
+                        <a href="https://wa.me/525534334147?text=Hola%2C%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20de%20Bioactivaci%C3%B3n%20Energ%C3%A9tica%20Kundalini%20(Costo%20%24500)"
+                            target="_blank" rel="noopener" class="btn-service-wa">
                             Agendar por WhatsApp
                         </a>
                     </div>
@@ -2170,10 +2256,15 @@
 
                 <!-- SERVICIO 3 -->
                 <article class="service-card" style="--accent:var(--gold)">
+                    <div class="service-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=700&q=80" alt="Constelaciones que Transforman tu Vida" loading="lazy">
+                        <div class="service-img-overlay"></div>
+                    </div>
                     <div class="service-card-top">
                         <div class="service-badge-row">
                             <div class="service-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round">
                                     <path d="M12 3c3 2 3 6 0 9-3-3-3-7 0-9Z" />
                                     <path d="M12 12v9" />
                                     <path d="M7 21c1.5-2 3-2 5-2s3.5 0 5 2" />
@@ -2183,28 +2274,41 @@
                         </div>
                         <h3>Constelaciones que Transforman tu Vida</h3>
                         <span class="service-motto">Familiares y Ventas · Bert Hellinger</span>
-                        <p>Herramienta terapéutica para sanar heridas de origen, liberar lealtades invisibles y desbloquear el flujo del dinero, clientes y abundancia en tu negocio.</p>
+                        <p>Herramienta terapéutica para sanar heridas de origen, liberar lealtades invisibles y
+                            desbloquear el flujo del dinero, clientes y abundancia en tu negocio.</p>
                         <ul class="service-bullets">
                             <li>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                                 <span>Sanación de vínculos y patrones repetitivos</span>
                             </li>
                             <li>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                                 <span>Constelaciones en Ventas y Prosperidad</span>
                             </li>
                             <li>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                                 <span>Para personas, emprendedores y equipos</span>
                             </li>
                         </ul>
                     </div>
                     <div class="service-card-actions">
                         <button class="btn-service-detail" data-open-modal="3">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"
+                                height="16">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                            </svg>
                             Ver información completa
                         </button>
-                        <a href="https://wa.me/525534334147?text=Hola%2C%20me%20interesa%20agendar%20Constelaciones%20que%20Transforman%20tu%20Vida" target="_blank" rel="noopener" class="btn-service-wa">
+                        <a href="https://wa.me/525534334147?text=Hola%2C%20me%20interesa%20agendar%20Constelaciones%20que%20Transforman%20tu%20Vida%20(Costo%20%24500)"
+                            target="_blank" rel="noopener" class="btn-service-wa">
                             Agendar por WhatsApp
                         </a>
                     </div>
@@ -2212,10 +2316,15 @@
 
                 <!-- SERVICIO 4 -->
                 <article class="service-card" style="--accent:var(--gold-deep)">
+                    <div class="service-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1543807535-eceef0bc6599?auto=format&fit=crop&w=700&q=80" alt="Risoterapia y Bienestar" loading="lazy">
+                        <div class="service-img-overlay"></div>
+                    </div>
                     <div class="service-card-top">
                         <div class="service-badge-row">
                             <div class="service-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round">
                                     <circle cx="12" cy="9" r="3" />
                                     <path d="M8 21c0-3 1.8-5 4-5s4 2 4 5" />
                                     <path d="M5 12c-1-1-1-3 0-4m14 4c1-1 1-3 0-4" />
@@ -2225,28 +2334,41 @@
                         </div>
                         <h3>Risoterapia</h3>
                         <span class="service-motto">La risa que transforma tu vida</span>
-                        <p>Método creado en 1995 por el Dr. Madan Kataria. Estimula la risa consciente mediante dinámicas lúdicas y respiración para reducir estrés y fortalecer tu salud.</p>
+                        <p>Método creado en 1995 por el Dr. Madan Kataria. Estimula la risa consciente mediante
+                            dinámicas lúdicas y respiración para reducir estrés y fortalecer tu salud.</p>
                         <ul class="service-bullets">
                             <li>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                                 <span>Reduce estrés y fortalece inmunidad</span>
                             </li>
                             <li>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                                 <span>No requieres humor, ¡solo ganas de vivirlo!</span>
                             </li>
                             <li>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                                 <span>Ideal individual y para integración de equipos</span>
                             </li>
                         </ul>
                     </div>
                     <div class="service-card-actions">
                         <button class="btn-service-detail" data-open-modal="4">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"
+                                height="16">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                            </svg>
                             Ver información completa
                         </button>
-                        <a href="https://wa.me/525534334147?text=Hola%2C%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20de%20Risoterapia" target="_blank" rel="noopener" class="btn-service-wa">
+                        <a href="https://wa.me/525534334147?text=Hola%2C%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20de%20Risoterapia%20(Costo%20%24500)"
+                            target="_blank" rel="noopener" class="btn-service-wa">
                             Agendar por WhatsApp
                         </a>
                     </div>
@@ -2254,10 +2376,15 @@
 
                 <!-- SERVICIO 5 -->
                 <article class="service-card" style="--accent:var(--sky)">
+                    <div class="service-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=700&q=80" alt="Mindfulness y Atención Plena" loading="lazy">
+                        <div class="service-img-overlay"></div>
+                    </div>
                     <div class="service-card-top">
                         <div class="service-badge-row">
                             <div class="service-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round">
                                     <circle cx="12" cy="8" r="3.2" />
                                     <path d="M12 11.2V16m-4 5c.5-2.5 2-4 4-4s3.5 1.5 4 4" />
                                 </svg>
@@ -2266,28 +2393,41 @@
                         </div>
                         <h3>Mindfulness</h3>
                         <span class="service-motto">Atención plena para transformar tu vida</span>
-                        <p>Práctica de presencia consciente para habitar el momento presente con claridad, sanar patrones repetitivos, reducir la ansiedad y reconectar con la calma.</p>
+                        <p>Práctica de presencia consciente para habitar el momento presente con claridad, sanar
+                            patrones repetitivos, reducir la ansiedad y reconectar con la calma.</p>
                         <ul class="service-bullets">
                             <li>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                                 <span>Disminuye la ansiedad y la preocupación</span>
                             </li>
                             <li>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                                 <span>Mejora concentración, memoria y enfoque</span>
                             </li>
                             <li>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                                 <span>Sana patrones negativos y agotamiento</span>
                             </li>
                         </ul>
                     </div>
                     <div class="service-card-actions">
                         <button class="btn-service-detail" data-open-modal="5">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"
+                                height="16">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                            </svg>
                             Ver información completa
                         </button>
-                        <a href="https://wa.me/525534334147?text=Hola%2C%20me%20interesa%20agendar%20terapia%20de%20Mindfulness" target="_blank" rel="noopener" class="btn-service-wa">
+                        <a href="https://wa.me/525534334147?text=Hola%2C%20me%20interesa%20agendar%20terapia%20de%20Mindfulness%20(Costo%20%24500)"
+                            target="_blank" rel="noopener" class="btn-service-wa">
                             Agendar por WhatsApp
                         </a>
                     </div>
@@ -2295,10 +2435,15 @@
 
                 <!-- SERVICIO 6 -->
                 <article class="service-card" style="--accent:var(--sage)">
+                    <div class="service-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=700&q=80" alt="Danzaterapia y Movimiento Consciente" loading="lazy">
+                        <div class="service-img-overlay"></div>
+                    </div>
                     <div class="service-card-top">
                         <div class="service-badge-row">
                             <div class="service-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round">
                                     <path d="M12 3v6m0 0-4 4m4-4 4 4M6 21c2-4 4-6 6-8m6 8c-2-4-4-6-6-8" />
                                 </svg>
                             </div>
@@ -2306,28 +2451,41 @@
                         </div>
                         <h3>Danzaterapia (Danzoterapia)</h3>
                         <span class="service-motto">El movimiento que sana, transforma y libera</span>
-                        <p>El cuerpo recuerda y sana al moverse. A través de la música, respiración y movimiento consciente, liberamos traumas corporales y emociones reprimidas.</p>
+                        <p>El cuerpo recuerda y sana al moverse. A través de la música, respiración y movimiento
+                            consciente, liberamos traumas corporales y emociones reprimidas.</p>
                         <ul class="service-bullets">
                             <li>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                                 <span>Expresa lo que las palabras no alcanzan</span>
                             </li>
                             <li>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                                 <span>Sana dolor y tensión somatizada</span>
                             </li>
                             <li>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                                 <span>Mayor flexibilidad, alegría y calidad de sueño</span>
                             </li>
                         </ul>
                     </div>
                     <div class="service-card-actions">
                         <button class="btn-service-detail" data-open-modal="6">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"
+                                height="16">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                            </svg>
                             Ver información completa
                         </button>
-                        <a href="https://wa.me/525534334147?text=Hola%2C%20me%20interesa%20agendar%20Danzaterapia" target="_blank" rel="noopener" class="btn-service-wa">
+                        <a href="https://wa.me/525534334147?text=Hola%2C%20me%20interesa%20agendar%20Danzaterapia%20(Costo%20%24500)"
+                            target="_blank" rel="noopener" class="btn-service-wa">
                             Agendar por WhatsApp
                         </a>
                     </div>
@@ -2335,39 +2493,58 @@
 
                 <!-- SERVICIO 7 -->
                 <article class="service-card" style="--accent:var(--lavender)">
+                    <div class="service-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?auto=format&fit=crop&w=700&q=80" alt="Tanatología y Acompañamiento en el Duelo" loading="lazy">
+                        <div class="service-img-overlay"></div>
+                    </div>
                     <div class="service-card-top">
                         <div class="service-badge-row">
                             <div class="service-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
-                                    <path d="M12 21s-7-4.5-9-9c-1.4-3 1-6 4-6 2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3 0 5.4 3 4 6-2 4.5-9 9-9 9Z" />
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round">
+                                    <path
+                                        d="M12 21s-7-4.5-9-9c-1.4-3 1-6 4-6 2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3 0 5.4 3 4 6-2 4.5-9 9-9 9Z" />
                                 </svg>
                             </div>
                             <span class="service-price-pill">Costo $500</span>
                         </div>
                         <h3>Tanatología</h3>
                         <span class="service-motto">Transforma tu dolor en bienestar y propósito</span>
-                        <p>Acompañamiento terapéutico ante pérdidas significativas, rupturas o duelos para comprender tus emociones, perdonar y reconstruir tu vida con nuevo significado.</p>
+                        <p>Acompañamiento terapéutico ante pérdidas significativas, rupturas o duelos para comprender
+                            tus emociones, perdonar y reconstruir tu vida con nuevo significado.</p>
                         <ul class="service-bullets">
                             <li>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                                 <span>5 Puntos de Sanación: Aceptación a Propósito</span>
                             </li>
                             <li>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                                 <span>Gestión de tristeza, culpa y enojo</span>
                             </li>
                             <li>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                                 <span>Paz interior, fortaleza y gratitud</span>
                             </li>
                         </ul>
                     </div>
                     <div class="service-card-actions">
                         <button class="btn-service-detail" data-open-modal="7">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"
+                                height="16">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                            </svg>
                             Ver información completa
                         </button>
-                        <a href="https://wa.me/525534334147?text=Hola%2C%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20de%20Tanatolog%C3%ADa" target="_blank" rel="noopener" class="btn-service-wa">
+                        <a href="https://wa.me/525534334147?text=Hola%2C%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20de%20Tanatolog%C3%ADa%20(Costo%20%24500)"
+                            target="_blank" rel="noopener" class="btn-service-wa">
                             Agendar por WhatsApp
                         </a>
                     </div>
@@ -2389,14 +2566,17 @@
             <div class="section-head reveal">
                 <span class="eyebrow">Bienestar Corporativo e Institucional</span>
                 <h2>Talleres de Bienestar a las Empresas</h2>
-                <p>Experiencias vivenciales y dinámicas grupales diseñadas para fortalecer el clima laboral, reducir el estrés, potenciar el trabajo en equipo y elevar la vitalidad de tus colaboradores.</p>
+                <p>Experiencias vivenciales y dinámicas grupales diseñadas para fortalecer el clima laboral, reducir el
+                    estrés, potenciar el trabajo en equipo y elevar la vitalidad de tus colaboradores.</p>
             </div>
 
             <div class="workshop-wrap reveal">
                 <div class="workshop-track" id="workshopTrack">
                     <!-- Foto 1 -->
                     <div class="workshop-slide">
-                        <img src="assets/carrusel_1.jpg" onerror="this.onerror=null;this.src='assets/risoterapia_photo.jpg';" alt="Taller de Bienestar Empresarial 1 - Integración y Clima Laboral">
+                        <img src="assets/carrusel_1.jpg"
+                            onerror="this.onerror=null;this.src='assets/risoterapia_photo.jpg';"
+                            alt="Taller de Bienestar Empresarial 1 - Integración y Clima Laboral">
                         <div class="workshop-caption">
                             <span>Taller 1</span>
                             <h4>Integración y Clima Laboral</h4>
@@ -2404,7 +2584,9 @@
                     </div>
                     <!-- Foto 2 -->
                     <div class="workshop-slide">
-                        <img src="assets/carrusel_2.jpg" onerror="this.onerror=null;this.src='assets/mindfulness_photo.jpg';" alt="Taller de Bienestar Empresarial 2 - Mindfulness Corporativo">
+                        <img src="assets/carrusel_2.jpg"
+                            onerror="this.onerror=null;this.src='assets/mindfulness_photo.jpg';"
+                            alt="Taller de Bienestar Empresarial 2 - Mindfulness Corporativo">
                         <div class="workshop-caption">
                             <span>Taller 2</span>
                             <h4>Mindfulness y Enfoque Bajo Presión</h4>
@@ -2412,7 +2594,9 @@
                     </div>
                     <!-- Foto 3 -->
                     <div class="workshop-slide">
-                        <img src="assets/carrusel_3.jpg" onerror="this.onerror=null;this.src='assets/danzoterapia_photo.jpg';" alt="Taller de Bienestar Empresarial 3 - Risoterapia y Manejo del Estrés">
+                        <img src="assets/carrusel_3.jpg"
+                            onerror="this.onerror=null;this.src='assets/danzoterapia_photo.jpg';"
+                            alt="Taller de Bienestar Empresarial 3 - Risoterapia y Manejo del Estrés">
                         <div class="workshop-caption">
                             <span>Taller 3</span>
                             <h4>Risoterapia y Manejo del Estrés</h4>
@@ -2420,7 +2604,9 @@
                     </div>
                     <!-- Foto 4 -->
                     <div class="workshop-slide">
-                        <img src="assets/carrusel_4.jpg" onerror="this.onerror=null;this.src='assets/risoterapia_photo.jpg';" alt="Taller de Bienestar Empresarial 4 - Danzaterapia y Movimiento Consciente">
+                        <img src="assets/carrusel_4.jpg"
+                            onerror="this.onerror=null;this.src='assets/risoterapia_photo.jpg';"
+                            alt="Taller de Bienestar Empresarial 4 - Danzaterapia y Movimiento Consciente">
                         <div class="workshop-caption">
                             <span>Taller 4</span>
                             <h4>Danzaterapia y Liberación Emocional</h4>
@@ -2428,7 +2614,9 @@
                     </div>
                     <!-- Foto 5 -->
                     <div class="workshop-slide">
-                        <img src="assets/carrusel_5.jpg" onerror="this.onerror=null;this.src='assets/mindfulness_photo.jpg';" alt="Taller de Bienestar Empresarial 5 - Constelaciones en Ventas y Liderazgo">
+                        <img src="assets/carrusel_5.jpg"
+                            onerror="this.onerror=null;this.src='assets/mindfulness_photo.jpg';"
+                            alt="Taller de Bienestar Empresarial 5 - Constelaciones en Ventas y Liderazgo">
                         <div class="workshop-caption">
                             <span>Taller 5</span>
                             <h4>Constelaciones en Ventas y Liderazgo</h4>
@@ -2436,7 +2624,9 @@
                     </div>
                     <!-- Foto 6 -->
                     <div class="workshop-slide">
-                        <img src="assets/carrusel_6.jpg" onerror="this.onerror=null;this.src='assets/danzoterapia_photo.jpg';" alt="Taller de Bienestar Empresarial 6 - Comunicación Consciente y Empatía">
+                        <img src="assets/carrusel_6.jpg"
+                            onerror="this.onerror=null;this.src='assets/danzoterapia_photo.jpg';"
+                            alt="Taller de Bienestar Empresarial 6 - Comunicación Consciente y Empatía">
                         <div class="workshop-caption">
                             <span>Taller 6</span>
                             <h4>Comunicación Consciente y Empatía</h4>
@@ -2444,7 +2634,9 @@
                     </div>
                     <!-- Foto 7 -->
                     <div class="workshop-slide">
-                        <img src="assets/carrusel_7.jpg" onerror="this.onerror=null;this.src='assets/risoterapia_photo.jpg';" alt="Taller de Bienestar Empresarial 7 - Dinámicas de Trabajo en Equipo">
+                        <img src="assets/carrusel_7.jpg"
+                            onerror="this.onerror=null;this.src='assets/risoterapia_photo.jpg';"
+                            alt="Taller de Bienestar Empresarial 7 - Dinámicas de Trabajo en Equipo">
                         <div class="workshop-caption">
                             <span>Taller 7</span>
                             <h4>Dinámicas de Trabajo en Equipo</h4>
@@ -2452,7 +2644,9 @@
                     </div>
                     <!-- Foto 8 -->
                     <div class="workshop-slide">
-                        <img src="assets/carrusel_8.jpg" onerror="this.onerror=null;this.src='assets/mindfulness_photo.jpg';" alt="Taller de Bienestar Empresarial 8 - Pausas Activas y Vitalidad">
+                        <img src="assets/carrusel_8.jpg"
+                            onerror="this.onerror=null;this.src='assets/mindfulness_photo.jpg';"
+                            alt="Taller de Bienestar Empresarial 8 - Pausas Activas y Vitalidad">
                         <div class="workshop-caption">
                             <span>Taller 8</span>
                             <h4>Pausas Activas y Vitalidad Diaria</h4>
@@ -2460,7 +2654,9 @@
                     </div>
                     <!-- Foto 9 -->
                     <div class="workshop-slide">
-                        <img src="assets/carrusel_9.jpg" onerror="this.onerror=null;this.src='assets/danzoterapia_photo.jpg';" alt="Taller de Bienestar Empresarial 9 - Salud Emocional para Equipos">
+                        <img src="assets/carrusel_9.jpg"
+                            onerror="this.onerror=null;this.src='assets/danzoterapia_photo.jpg';"
+                            alt="Taller de Bienestar Empresarial 9 - Salud Emocional para Equipos">
                         <div class="workshop-caption">
                             <span>Taller 9</span>
                             <h4>Salud Emocional para Equipos</h4>
@@ -2468,7 +2664,9 @@
                     </div>
                     <!-- Foto 10 -->
                     <div class="workshop-slide">
-                        <img src="assets/carrusel_10.jpg" onerror="this.onerror=null;this.src='assets/profile_photo.jpg';" alt="Taller de Bienestar Empresarial 10 - Reconexión y Propósito Colectivo">
+                        <img src="assets/carrusel_10.jpg"
+                            onerror="this.onerror=null;this.src='assets/profile_photo.jpg';"
+                            alt="Taller de Bienestar Empresarial 10 - Reconexión y Propósito Colectivo">
                         <div class="workshop-caption">
                             <span>Taller 10</span>
                             <h4>Reconexión y Propósito Colectivo</h4>
@@ -2479,12 +2677,14 @@
                     <div class="workshop-dots" id="workshopDots"></div>
                     <div class="arrow-group">
                         <button class="arrow-btn" id="wPrev" aria-label="Anterior">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M15 18l-6-6 6-6" />
                             </svg>
                         </button>
                         <button class="arrow-btn" id="wNext" aria-label="Siguiente">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M9 18l6-6-6-6" />
                             </svg>
                         </button>
@@ -2492,7 +2692,8 @@
                 </div>
             </div>
             <div style="text-align:center;margin-top:2.5rem;">
-                <a href="https://wa.me/525534334147?text=Hola%2C%20me%20gustar%C3%ADa%20cotizar%20un%20Taller%20de%20Bienestar%20para%20mi%20Empresa" target="_blank" rel="noopener" class="btn btn-primary">
+                <a href="https://wa.me/525534334147?text=Hola%2C%20me%20gustar%C3%ADa%20cotizar%20un%20Taller%20de%20Bienestar%20para%20mi%20Empresa"
+                    target="_blank" rel="noopener" class="btn btn-primary">
                     Cotizar taller para tu empresa
                 </a>
             </div>
@@ -2598,7 +2799,8 @@
                         </div>
                     </div>
                     <p style="font-size:.82rem;color:rgba(255,255,255,.6);margin-top:1.2rem;">Tu información de pago es
-                        confidencial. Al confirmar tu comprobante, tu cita queda agendada en nuestro horario de atención (6:00 am a 7:00 pm).
+                        confidencial. Al confirmar tu comprobante, tu cita queda agendada en la línea de atención 6 am -
+                        7 pm.
                     </p>
                 </div>
             </div>
@@ -2611,7 +2813,8 @@
             <div class="section-head reveal">
                 <span class="eyebrow">Ubicación y Consultorio</span>
                 <h2>Un espacio seguro y tranquilo para tu bienestar</h2>
-                <p>Atención presencial en nuestras instalaciones en Valle Dorado y sesiones en línea para cualquier parte del mundo.</p>
+                <p>Atención presencial en nuestras instalaciones en Valle Dorado y sesiones en línea para cualquier
+                    parte del mundo.</p>
             </div>
             <div class="location-grid reveal">
                 <div class="location-card">
@@ -2623,7 +2826,9 @@
                             </svg></div>
                         <div>
                             <h4>Dirección del Consultorio</h4>
-                            <p style="font-weight:500;color:var(--ink);line-height:1.45;">Calzada de los Jinetes 4, primer piso, despacho 102, Fraccionamiento Valle Dorado, C.P. 54020, Tlalnepantla de Baz, Edomex, México.</p>
+                            <p style="font-weight:500;color:var(--ink);line-height:1.45;">Calzada de los Jinetes 4,
+                                primer piso, despacho 102, Fraccionamiento Valle Dorado, C.P. 54020, Tlalnepantla de
+                                Baz, Edomex, México.</p>
                         </div>
                     </div>
                     <div class="location-item">
@@ -2633,8 +2838,8 @@
                                     d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.12.9.33 1.8.63 2.7a2 2 0 0 1-.45 2.1L8.1 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.45c.87.3 1.77.51 2.7.63A2 2 0 0 1 22 16.9Z" />
                             </svg></div>
                         <div>
-                            <h4>Horario de Atención (6:00 am - 7:00 pm)</h4>
-                            <p>55 3433 4147 · De lunes a domingo de 6:00 am a 7:00 pm.</p>
+                            <h4>Línea de Atención 6 am - 7 pm</h4>
+                            <p>55 3433 4147 · De lunes a domingo, tu salud es la prioridad.</p>
                         </div>
                     </div>
                     <div class="location-item">
@@ -2648,22 +2853,50 @@
                             <p>expansionyb88@gmail.com</p>
                         </div>
                     </div>
+                    <div class="location-item">
+                        <div class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round">
+                                <circle cx="18" cy="5" r="3"/>
+                                <circle cx="6" cy="12" r="3"/>
+                                <circle cx="18" cy="19" r="3"/>
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                            </svg></div>
+                        <div>
+                            <h4>Redes Sociales Oficiales</h4>
+                            <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.4rem;">
+                                <a href="https://www.instagram.com/nancygarcialoyopsico?utm_source=qr&igsi=MTJ3OXdlbjd1d2d4bw==" target="_blank" rel="noopener" class="social-pill-btn" style="display:inline-flex;align-items:center;gap:.4rem;padding:.38rem .85rem;background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);color:#fff;border-radius:999px;font-size:.82rem;font-weight:600;text-decoration:none;">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+                                    <span>Instagram</span>
+                                </a>
+                                <a href="https://www.tiktok.com/@expansin33?_r=1&_t=ZS-998qAoz3TF4" target="_blank" rel="noopener" class="social-pill-btn" style="display:inline-flex;align-items:center;gap:.4rem;padding:.38rem .85rem;background:#010101;color:#fff;border-radius:999px;font-size:.82rem;font-weight:600;text-decoration:none;">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 1 1-5.2-1.74 2.89 2.89 0 0 1 2.31-2.82V7.58a6.34 6.34 0 0 0-3.56 1.01 6.34 6.34 0 1 0 10.9 4.39V8.65a8.22 8.22 0 0 0 4.77 1.49V6.69a4.83 4.83 0 0 1-2-.01z"/></svg>
+                                    <span>TikTok</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <div style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:.6rem;">
                         <a href="https://www.google.com/maps/search/Calzada+de+los+Jinetes+4+primer+piso+despacho+102+Fraccionamiento+Valle+Dorado,+54020+Tlalnepantla+de+Baz,+Edomex,+M%C3%A9xico/@19.5546,-99.2122,17z?hl=es&entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D"
                             target="_blank" rel="noopener" class="btn btn-primary" style="align-self:flex-start;">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" style="margin-right:6px;"><path d="M12 21s-7-4.5-7-11a7 7 0 0 1 14 0c0 6.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"
+                                height="16" style="margin-right:6px;">
+                                <path d="M12 21s-7-4.5-7-11a7 7 0 0 1 14 0c0 6.5-7 11-7 11Z" />
+                                <circle cx="12" cy="10" r="2.6" />
+                            </svg>
                             Abrir en Google Maps
                         </a>
                         <a href="https://wa.me/525534334147?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20cita%20presencial%20en%20el%20consultorio%20de%20Valle%20Dorado"
-                            target="_blank" rel="noopener" class="btn btn-outline" style="align-self:flex-start;color:var(--teal-deep);border-color:var(--teal-deep);">
+                            target="_blank" rel="noopener" class="btn btn-outline"
+                            style="align-self:flex-start;color:var(--teal-deep);border-color:var(--teal-deep);">
                             Cómo llegar por WhatsApp
                         </a>
                     </div>
                 </div>
                 <div class="map-frame">
-                    <iframe src="https://maps.google.com/maps?q=Calzada+de+los+Jinetes+4+primer+piso+despacho+102+Fraccionamiento+Valle+Dorado,+54020+Tlalnepantla+de+Baz,+Edomex,+M%C3%A9xico&t=&z=16&ie=UTF8&iwloc=&output=embed"
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
+                    <iframe
+                        src="https://maps.google.com/maps?q=Calzada+de+los+Jinetes+4+primer+piso+despacho+102+Fraccionamiento+Valle+Dorado,+54020+Tlalnepantla+de+Baz,+Edomex,+M%C3%A9xico&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                         title="Mapa de ubicación en Calzada de los Jinetes 4, Fraccionamiento Valle Dorado, Tlalnepantla de Baz, Edomex">
                     </iframe>
                 </div>
@@ -2723,7 +2956,7 @@
                     <ul>
                         <li>WhatsApp: 55 3433 4147</li>
                         <li>expansionyb88@gmail.com</li>
-                        <li>Horario: 6:00 am a 7:00 pm · Lunes a domingo</li>
+                        <li>Línea 6 am - 7 pm · Lunes a domingo</li>
                     </ul>
                 </div>
             </div>
@@ -2747,7 +2980,10 @@
     <div class="service-modal-overlay" id="serviceModal" aria-hidden="true">
         <div class="service-modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
             <button class="modal-close-btn" id="modalCloseBtn" aria-label="Cerrar ventana">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
             </button>
             <span class="modal-badge-tag" id="modalBadge">Servicio Terapéutico</span>
             <h2 class="modal-title" id="modalTitle">Título del Servicio</h2>
@@ -2757,11 +2993,16 @@
             </div>
             <div class="modal-footer-cta">
                 <div>
-                    <span style="font-size:.82rem;color:var(--ink-soft);display:block;">Horario de atención: 6:00 am a 7:00 pm</span>
+                    <span style="font-size:.82rem;color:var(--ink-soft);display:block;">Atención personalizada
+                        6 am - 7 pm</span>
                     <strong style="color:var(--teal-deep);font-size:1.05rem;">55 3433 4147</strong>
                 </div>
-                <a href="#" id="modalWaBtn" target="_blank" rel="noopener" class="btn btn-whatsapp" style="padding:.85em 1.5em;">
-                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.5 0 9.96-4.46 9.96-9.96C21.99 6.46 17.54 2 12.04 2Zm5.8 14.24c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.13.11-1.82-.12-.42-.14-.96-.32-1.65-.63-2.9-1.25-4.8-4.16-4.94-4.35-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36h.56c.18 0 .42-.03.64.49.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.14-.3.3-.13.58.17.29.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.35 1.46.29.14.48.22.55.34.07.12.07.68-.17 1.36Z"/></svg>
+                <a href="#" id="modalWaBtn" target="_blank" rel="noopener" class="btn btn-whatsapp"
+                    style="padding:.85em 1.5em;">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                        <path
+                            d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.5 0 9.96-4.46 9.96-9.96C21.99 6.46 17.54 2 12.04 2Zm5.8 14.24c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.13.11-1.82-.12-.42-.14-.96-.32-1.65-.63-2.9-1.25-4.8-4.16-4.94-4.35-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36h.56c.18 0 .42-.03.64.49.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.14-.3.3-.13.58.17.29.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.35 1.46.29.14.48.22.55.34.07.12.07.68-.17 1.36Z" />
+                    </svg>
                     Agendar este servicio
                 </a>
             </div>
@@ -2944,7 +3185,11 @@
                     <div style="background:var(--paper-alt);padding:1rem 1.2rem;border-radius:var(--radius-sm);border:1px solid var(--line);">
                         <strong style="color:var(--teal-deep);display:block;margin-bottom:.3rem;">Inversión por sesión:</strong>
                         <p style="font-size:1.15rem;font-weight:700;color:var(--gold-deep);margin:0 0 .3rem;">$700 MXN</p>
-                               "2": {
+                        <p style="font-size:.85rem;color:var(--ink-soft);margin:0;">Pregunta por nuestros paquetes especiales para procesos continuos o grupales.</p>
+                    </div>
+                `
+            },
+            "2": {
                 badge: "Servicio 2 · Costo $500",
                 title: "Bioactivación Energética Kundalini",
                 motto: "Despierta tu energía, transforma tu vida · Tu bienestar comienza desde tu energía.",
@@ -3065,7 +3310,7 @@
                             <li>Reduce el estrés, la ansiedad y la tensión muscular.</li>
                             <li>Mejora el estado de ánimo y aumenta la felicidad mediante la liberación de endorfinas.</li>
                             <li>Fortalece el sistema inmunológico.</li>
-                            <li>Mejora la respiración, la oxigenación celular y la capacidad pulmonar.</li>
+                            <li>Mejora la respiración, la oxigenación celular y la capacity pulmonar.</li>
                             <li>Fomenta la conexión, la empatía y el trabajo en equipo.</li>
                             <li>Aumenta la energía vital y la resiliencia ante el día a día.</li>
                         </ul>
@@ -3216,16 +3461,29 @@
         const modalWaBtn = document.getElementById('modalWaBtn');
         const modalCloseBtn = document.getElementById('modalCloseBtn');
 
+        const serviceImages = {
+            "1": "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=700&q=80",
+            "2": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=700&q=80",
+            "3": "https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=700&q=80",
+            "4": "https://images.unsplash.com/photo-1543807535-eceef0bc6599?auto=format&fit=crop&w=700&q=80",
+            "5": "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=700&q=80",
+            "6": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=700&q=80",
+            "7": "https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?auto=format&fit=crop&w=700&q=80"
+        };
+
         document.querySelectorAll('[data-open-modal]').forEach(btn => {
             btn.addEventListener('click', () => {
                 const id = btn.getAttribute('data-open-modal');
                 const data = servicesData[id];
                 if (!data) return;
 
+                const imgUrl = serviceImages[id];
+                const imgHtml = imgUrl ? `<div style="width:100%;height:180px;border-radius:var(--radius-sm);overflow:hidden;margin-bottom:1.2rem;"><img src="${imgUrl}" alt="${data.title}" style="width:100%;height:100%;object-fit:cover;display:block;"></div>` : '';
+
                 modalBadge.textContent = data.badge;
                 modalTitle.textContent = data.title;
                 modalMotto.textContent = data.motto;
-                modalBody.innerHTML = data.html;
+                modalBody.innerHTML = imgHtml + data.html;
                 modalWaBtn.href = `https://wa.me/525534334147?text=${encodeURIComponent(data.waMsg)}`;
 
                 modalOverlay.classList.add('active');
