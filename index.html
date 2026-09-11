@@ -279,6 +279,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 1.2rem;
             padding: .7rem 0;
         }
 
@@ -286,12 +287,15 @@
             display: flex;
             align-items: center;
             gap: .7rem;
+            flex-shrink: 0;
+            white-space: nowrap;
         }
 
         .brand img {
             height: 44px;
             width: auto;
             border-radius: 12px;
+            flex-shrink: 0;
         }
 
         .brand-name {
@@ -300,6 +304,7 @@
             font-weight: 600;
             color: var(--teal-deep);
             line-height: 1.1;
+            white-space: nowrap;
         }
 
         .brand-name span {
@@ -315,15 +320,17 @@
         .main-nav {
             display: flex;
             align-items: center;
-            gap: 2rem;
+            gap: clamp(0.45rem, 1.1vw, 1.2rem);
+            flex-shrink: 1;
         }
 
         .main-nav a {
-            font-size: .92rem;
+            font-size: .88rem;
             font-weight: 600;
             color: var(--ink-soft);
             position: relative;
             padding: .3rem 0;
+            white-space: nowrap;
         }
 
         .main-nav a::after {
@@ -341,136 +348,46 @@
             width: 100%;
         }
 
-        /* ============ GNP NAV & ANNOUNCEMENT ============ */
-        .top-announcement-bar {
-            background: linear-gradient(90deg, #001A3D 0%, #002F6C 50%, #08244c 100%);
-            color: #FFFFFF;
-            font-size: .84rem;
-            padding: .55rem 0;
-            border-bottom: 1px solid rgba(255, 98, 0, .3);
-            position: relative;
-            z-index: 105;
-        }
-
-        .announcement-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-        }
-
-        .announcement-content {
-            display: flex;
-            align-items: center;
-            gap: .75rem;
-            flex-wrap: wrap;
-        }
-
-        .announcement-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: .35rem;
-            background: #FF6200;
-            color: #FFFFFF;
-            padding: .2rem .65rem;
-            border-radius: 999px;
-            font-size: .68rem;
-            font-weight: 800;
-            letter-spacing: .08em;
-            text-transform: uppercase;
-            box-shadow: 0 2px 8px rgba(255, 98, 0, .4);
-        }
-
-        .announcement-tag svg {
-            width: 12px;
-            height: 12px;
-        }
-
-        .announcement-text {
-            color: rgba(255, 255, 255, .92);
-        }
-
-        .announcement-text strong {
-            color: #FFFFFF;
-        }
-
-        .announcement-link {
-            display: inline-flex;
-            align-items: center;
-            gap: .4rem;
-            color: #FFA366;
-            font-weight: 700;
-            font-size: .82rem;
-            padding: .25rem .75rem;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, .08);
-            border: 1px solid rgba(255, 163, 102, .3);
-            text-decoration: none;
-            transition: all .25s ease;
-            white-space: nowrap;
-        }
-
-        .announcement-link:hover {
-            background: #FF6200;
-            color: #FFFFFF;
-            border-color: #FF6200;
-            transform: translateX(2px);
-        }
-
-        .nav-item-gnp {
+        /* ============ GNP NAV BUTTON ============ */
+        .btn-gnp-pill {
             display: inline-flex !important;
             align-items: center;
             gap: .45rem;
-            padding: .35rem .85rem !important;
-            background: rgba(0, 47, 108, .07);
-            border: 1px solid rgba(0, 47, 108, .2);
+            padding: .35rem .75rem !important;
+            background: #FFFFFF;
+            border: 1.5px solid rgba(0, 47, 108, 0.28);
             border-radius: 999px;
             color: #002F6C !important;
             font-weight: 700 !important;
+            font-size: .84rem !important;
+            box-shadow: 0 2px 8px rgba(0, 47, 108, 0.08);
             transition: all .25s ease !important;
+            white-space: nowrap;
+            flex-shrink: 0;
         }
 
-        .nav-item-gnp::after {
+        .btn-gnp-pill::after {
             display: none !important;
         }
 
-        .nav-item-gnp:hover {
+        .btn-gnp-pill img {
+            height: 17px;
+            width: auto;
+            object-fit: contain;
+            display: inline-block;
+            transition: filter .25s ease;
+        }
+
+        .btn-gnp-pill:hover {
             background: #002F6C !important;
             color: #FFFFFF !important;
             border-color: #002F6C !important;
             transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(0, 47, 108, .22);
+            box-shadow: 0 4px 14px rgba(0, 47, 108, 0.22);
         }
 
-        .nav-item-gnp:hover .badge-gnp {
-            background: #FF6200;
-            color: #FFFFFF;
-        }
-
-        .badge-gnp {
-            background: #002F6C;
-            color: #FFFFFF;
-            font-size: .62rem;
-            font-weight: 800;
-            letter-spacing: .08em;
-            padding: .15rem .45rem;
-            border-radius: 999px;
-            transition: all .25s ease;
-        }
-
-        @media (max-width:860px) {
-            .announcement-inner {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: .4rem;
-            }
-            .announcement-text {
-                font-size: .78rem;
-                line-height: 1.35;
-            }
-            .nav-item-gnp {
-                margin: .3rem 0;
-            }
+        .btn-gnp-pill:hover img {
+            filter: brightness(0) invert(1);
         }
 
         .nav-toggle {
@@ -2048,7 +1965,7 @@
             }
         }
 
-        @media (max-width:860px) {
+        @media (max-width:1080px) {
             .main-nav {
                 position: fixed;
                 inset: 64px 0 0 0;
@@ -2101,23 +2018,6 @@
 
 <body>
 
-    <!-- ============ TOP ANNOUNCEMENT BAR ============ -->
-    <aside class="top-announcement-bar" aria-label="Aviso Seguros GNP">
-        <div class="container announcement-inner">
-            <div class="announcement-content">
-                <span class="announcement-tag">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-                    NUEVO
-                </span>
-                <span class="announcement-text"><strong>Protege hoy lo que quieres disfrutar mañana:</strong> Asesoría en Seguros, Retiro y Gastos Médicos GNP.</span>
-            </div>
-            <a href="seguros" class="announcement-link">
-                Ver Planes y Cotizador
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-        </div>
-    </aside>
-
     <!-- ============ HEADER ============ -->
     <header class="site-header">
         <div class="container header-inner">
@@ -2128,9 +2028,9 @@
             <nav class="main-nav" id="mainNav">
                 <a href="#sobre-mi">Sobre mí</a>
                 <a href="#servicios">Servicios</a>
-                <a href="seguros" class="nav-item-gnp" title="Protección Patrimonial y Seguros GNP">
-                    <span>Seguros GNP</span>
-                    <span class="badge-gnp">ASESORÍA</span>
+                <a href="seguros" class="btn-gnp-pill" title="Seguros GNP">
+                    <img src="logos/logo.png" alt="GNP">
+                    <span>Seguros</span>
                 </a>
                 <a href="#talleres">Talleres</a>
                 <a href="#reconocimientos">Respaldo</a>
