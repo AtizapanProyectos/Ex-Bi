@@ -1,0 +1,27 @@
+# ===================================================
+# URLs Limpias y Redirección Profesional
+# Expansión y Bienestar - expansionybienestar.com.mx
+# ===================================================
+
+RewriteEngine On
+
+# 1. Redirigir /index.html o /index a la raíz del dominio (https://expansionybienestar.com.mx/)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(index|index\.html)\ HTTP/ [NC]
+RewriteRule ^(index|index\.html)$ / [R=301,L]
+
+# 2. Redirigir /seguros.html a /seguros (evita mostrar la extensión .html en la barra del navegador)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /seguros\.html\ HTTP/ [NC]
+RewriteRule ^seguros\.html$ /seguros [R=301,L]
+
+# 3. Reescribir internamente cualquier URL sin extensión a su archivo .html si existe
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([a-zA-Z0-9_-]+)/?$ $1.html [L]
+
+# 4. Forzar HTTPS y compresión (Opcional recomendado)
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json
+</IfModule>
+
+# 5. Seguridad: Desactivar listado de directorios
+Options -Indexes
